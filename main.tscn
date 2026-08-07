@@ -1737,6 +1737,9 @@ sources/8 = SubResource("TileSetAtlasSource_5vw27")
 sources/0 = SubResource("TileSetAtlasSource_h2yge")
 sources/3 = SubResource("TileSetAtlasSource_272bh")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sdby"]
+size = Vector2(90.75, 167.5)
+
 [node name="Node" type="Node" unique_id=2054117175]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=618916817]
@@ -1765,6 +1768,12 @@ script = ExtResource("5_7mycd")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=235454107]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=921339068]
-position = Vector2(75.25, 269.75)
-scale = Vector2(0.67378753, 0.7309028)
+texture_filter = 1
+position = Vector2(38.25, 250.25)
+scale = Vector2(1, 1.012)
 texture = ExtResource("6_7mycd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D" unique_id=1896207543]
+position = Vector2(-0.625, 0.9881439)
+scale = Vector2(1, 0.9881423)
+shape = SubResource("RectangleShape2D_1sdby")
