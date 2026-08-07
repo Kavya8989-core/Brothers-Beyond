@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://coyiu3236ix1q" path="res://download__5_-removebg-preview.png" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bsjfgl336twsx" path="res://Bush_simple2_1.png" id="4_lquwl"]
 [ext_resource type="Script" uid="uid://dhsdydqybd743" path="res://tile_map.gd" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dicokr7d5ygqf" path="res://Gemini_Generated_Image_b6rp22b6rp22b6rp-removebg-preview.png" id="6_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -1760,3 +1761,10 @@ layer_1/tile_data = PackedInt32Array(262145, 393217, 19, 851970, 458753, 19, 851
 layer_2/name = "bushes"
 layer_2/tile_data = PackedInt32Array(262165, 3, 0, 327701, 3, 1, 262166, 65539, 0, 327702, 65539, 1, 786451, 3, 0, 851987, 3, 1, 851970, 3, 0, 917506, 3, 1, 851971, 65539, 0, 917507, 65539, 1, 262144, 3, 0, 327680, 3, 1, 262145, 65539, 0, 327681, 65539, 1, 655379, 3, 0, 720915, 3, 1, 393216, 589824, 19, 393217, 655360, 19, 393218, 720896, 19, 393219, 786432, 19, 393220, 851968, 19, 393221, 589824, 19, 393222, 655360, 19, 393223, 720896, 19, 393224, 786432, 19, 393225, 589824, 19, 393226, 655360, 19, 393227, 720896, 19, 393228, 786432, 19, 458752, 589824, 22, 458753, 655360, 22, 458754, 720896, 22, 458755, 786432, 22, 458756, 851968, 22, 458757, 589824, 22, 458758, 655360, 22, 458759, 720896, 22, 458760, 589824, 22, 458761, 655360, 22, 458762, 720896, 22, 458763, 786432, 22, 458764, 851968, 22, 458765, 1179648, 22, 393229, 786432, 19, 458766, 1441792, 22, 393230, 1441792, 19)
 script = ExtResource("5_7mycd")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=235454107]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=921339068]
+position = Vector2(75.25, 269.75)
+scale = Vector2(0.67378753, 0.7309028)
+texture = ExtResource("6_7mycd")
