@@ -1,23 +1,41 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+const walk_SPEED = 100.0
+const run_SPEED=200.0
 
+var check_direction: Vector2=Vector2.RIGHT
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
-func _physics_process(delta: float) -> void:
-	var direction := Input.get_vector("left", "right", "up", "down")
-	velocity = direction * SPEED
 
-	process_animations(direction)
+func _physics_process(_delta: float) -> void:
+	process_animations()
+	var direction := Input.get_vector("left", "right", "up", "down")
+	if direction!=Vector2.ZERO:
+		check_direction=direction
+		if Input.is_action_pressed("run"):
+			velocity = direction * run_SPEED
+		else:
+			velocity = direction * walk_SPEED
+	else:
+		velocity=Vector2.ZERO
+
+
+
+
+
+	
 	move_and_slide()
 
 
-func process_animations(direction) -> void:
+func process_animations() -> void:
 	if velocity != Vector2.ZERO:
-		play_animations("move", direction)
+		if Input.is_action_pressed("run"):
+			play_animations("run",check_direction)
+		else:
+			play_animations("move",check_direction)
 	else:
-		play_animations("idle", direction)
+		play_animations("idle", check_direction)
 
 
 func play_animations(prefix: String, dir: Vector2) -> void:
@@ -29,3 +47,4 @@ func play_animations(prefix: String, dir: Vector2) -> void:
 		animated_sprite_2d.play(prefix + " up")
 	elif dir.y > 0:
 		animated_sprite_2d.play(prefix + " down")
+		
