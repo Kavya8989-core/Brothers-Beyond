@@ -9395,7 +9395,6 @@ tile_map_data = PackedByteArray("AAA9AAoAAAAAAAEAAAA9AAsAAAAAAAIAAAA+AAoAAAABAAE
 tile_set = SubResource("TileSet_2cqfq")
 
 [node name="rocks" type="TileMapLayer" parent="." unique_id=1168597631]
-texture_filter = 1
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAADABoAAAAAAAIAAAADABsAAAAAAAMAAAAEABoAAAABAAIAAAAEABsAAAABAAMAAAABAAkAAAAAAAIAAAABAAoAAAAAAAMAAAACAAkAAAABAAIAAAACAAoAAAABAAMAAAANAAEAAAAAAAIAAAANAAIAAAAAAAMAAAAOAAEAAAABAAIAAAAOAAIAAAABAAMAAAAKAA0AAAAAAAIAAAAKAA4AAAAAAAMAAAALAA0AAAABAAIAAAALAA4AAAABAAMAAAAaAAAAAAAAAAIAAAAaAAEAAAAAAAMAAAAbAAAAAAABAAIAAAAbAAEAAAABAAMAAAAUAAoAAAALAAEAAAAUAAsAAAALAAIAAAAVAAoAAAAMAAEAAAAVAAsAAAAMAAIAAAA=")
 tile_set = SubResource("TileSet_5vw27")
@@ -9427,3 +9426,10 @@ tile_set = SubResource("TileSet_1sdby")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("16_2cqfq")]
 position = Vector2(30, 292)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=560879704]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 700
