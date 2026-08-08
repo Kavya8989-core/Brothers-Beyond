@@ -331,7 +331,6 @@ animations = [{
 script = ExtResource("1_gjw6m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1548933293]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1sdby")
-animation = &"move down"
-frame = 3
-frame_progress = 0.6300043
+animation = &"move up"
