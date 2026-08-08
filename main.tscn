@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="14_vivmo"]
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="16_2cqfq"]
+[ext_resource type="Script" uid="uid://b3i3j1h4y8nx" path="res://mc scene/mc.gd" id="17_yaehf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
 texture = ExtResource("4_7mycd")
@@ -9219,7 +9220,7 @@ sources/0 = SubResource("TileSetAtlasSource_kek77")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("5_272bh")
 texture_region_size = Vector2i(145, 150)
-0:0/animation_speed = 3.0
+0:0/animation_speed = 5.0
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
 0:0/animation_frame_2/duration = 1.0
@@ -9426,4 +9427,5 @@ tile_map_data = PackedByteArray("AAALAB8AAAAAAAAAAAAXAAoAAAAAAAAAAAApAAoAAAAAAAA
 tile_set = SubResource("TileSet_1sdby")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("16_2cqfq")]
-position = Vector2(-9, -10)
+position = Vector2(30, 292)
+script = ExtResource("17_yaehf")
