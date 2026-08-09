@@ -2547,6 +2547,7 @@ texture_region_size = Vector2i(192, 192)
 0:0/animation_frame_6/duration = 1.0
 0:0/animation_frame_7/duration = 1.0
 0:0/0 = 0
+0:0/0/z_index = 1
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.7999954, 33.999992, 10, 41.200005, 9.195999, 68.243996, -10.164001, 66.30801)
 
 [sub_resource type="TileSet" id="TileSet_lmtf7"]
@@ -9049,15 +9050,10 @@ texture = ExtResource("4_7mycd")
 21:19/0 = 0
 22:19/0 = 0
 1:20/0 = 0
-1:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:20/0 = 0
-2:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:20/0 = 0
-3:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:20/0 = 0
-4:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:20/0 = 0
-5:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:20/0 = 0
 7:20/0 = 0
 8:20/0 = 0
@@ -9076,17 +9072,11 @@ texture = ExtResource("4_7mycd")
 21:20/0 = 0
 22:20/0 = 0
 0:21/0 = 0
-0:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:21/0 = 0
-1:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:21/0 = 0
-2:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:21/0 = 0
-3:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:21/0 = 0
-4:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:21/0 = 0
-5:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:21/0 = 0
 7:21/0 = 0
 8:21/0 = 0
@@ -9141,7 +9131,7 @@ texture = ExtResource("4_7mycd")
 22:22/0 = 0
 0:23/0 = 0
 0:23/0/y_sort_origin = 1
-0:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 1.828085, 5.1360455, 4.2655296, -8, 8)
 1:23/0 = 0
 1:23/0/y_sort_origin = 1
 1:23/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -9229,16 +9219,16 @@ texture = ExtResource("4_7mycd")
 11:25/0 = 0
 2:26/0 = 0
 2:26/0/y_sort_origin = 1
-2:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.08705139, -4.091427, -3.7432194)
 3:26/0 = 0
 3:26/0/y_sort_origin = 1
-3:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.395012, -4.091427, -3.7432194)
 4:26/0 = 0
 4:26/0/y_sort_origin = 1
-4:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.395012, -4.091427, -3.7432194)
 5:26/0 = 0
 5:26/0/y_sort_origin = 1
-5:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.395012, -8, -1.4798775)
 6:26/0 = 0
 7:26/0 = 0
 8:26/0 = 0
@@ -9318,7 +9308,6 @@ texture = ExtResource("4_7mycd")
 2:34/0 = 0
 4:34/0 = 0
 0:20/0 = 0
-0:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_p5ayx"]
 physics_layer_0/collision_layer = 1
@@ -9334,6 +9323,7 @@ texture_region_size = Vector2i(145, 150)
 0:0/animation_frame_3/duration = 1.0
 0:0/animation_frame_4/duration = 1.0
 0:0/0 = 0
+0:0/0/z_index = 1
 
 [sub_resource type="TileSet" id="TileSet_3cl2o"]
 sources/5 = SubResource("TileSetAtlasSource_4c57u")
@@ -9521,11 +9511,12 @@ tile_set = SubResource("TileSet_s5oi2")
 [node name="house" type="TileMapLayer" parent="." unique_id=1460297323]
 y_sort_enabled = true
 scale = Vector2(1.5, 1.5)
-tile_map_data = PackedByteArray("AAAvAAkAAAAAABkAAAAjAAUAAAAFABgAAAAeAAEAAAAAABQAAAAeAAIAAAAAABUAAAAeAAMAAAAAABYAAAAeAAQAAAAAABcAAAAeAAUAAAAAABgAAAAeAAYAAAAAABkAAAAfAAEAAAABABQAAAAfAAIAAAABABUAAAAfAAMAAAABABYAAAAfAAQAAAABABcAAAAfAAUAAAABABgAAAAfAAYAAAABABkAAAAgAAEAAAACABQAAAAgAAIAAAACABUAAAAgAAMAAAACABYAAAAgAAQAAAACABcAAAAgAAUAAAACABgAAAAgAAYAAAACABkAAAAhAAEAAAADABQAAAAhAAIAAAADABUAAAAhAAMAAAADABYAAAAhAAQAAAADABcAAAAhAAUAAAADABgAAAAhAAYAAAADABkAAAAiAAEAAAAEABQAAAAiAAIAAAAEABUAAAAiAAMAAAAEABYAAAAiAAQAAAAEABcAAAAiAAUAAAAEABgAAAAiAAYAAAAEABkAAAAjAAEAAAAFABQAAAAjAAIAAAAFABUAAAAjAAMAAAAFABYAAAAjAAQAAAAFABcAAAAjAAYAAAAFABkAAAA=")
+tile_map_data = PackedByteArray("AAAvAAkAAAAAABkAAAAeAAEAAAAAABQAAAAeAAIAAAAAABUAAAAeAAMAAAAAABYAAAAeAAQAAAAAABcAAAAeAAUAAAAAABgAAAAeAAYAAAAAABkAAAAfAAEAAAABABQAAAAfAAIAAAABABUAAAAfAAMAAAABABYAAAAfAAQAAAABABcAAAAfAAUAAAABABgAAAAfAAYAAAABABkAAAAgAAEAAAACABQAAAAgAAIAAAACABUAAAAgAAQAAAACABcAAAAgAAUAAAACABgAAAAgAAYAAAACABkAAAAhAAEAAAADABQAAAAhAAQAAAADABcAAAAhAAUAAAADABgAAAAhAAYAAAADABkAAAAiAAEAAAAEABQAAAAiAAMAAAAEABYAAAAiAAQAAAAEABcAAAAiAAUAAAAEABgAAAAiAAYAAAAEABkAAAAjAAEAAAAFABQAAAAjAAIAAAAFABUAAAAjAAMAAAAFABYAAAAjAAQAAAAFABcAAAAjAAUAAAAFABgAAAAjAAYAAAAFABkAAAAiAAIAAAAEABUAAAAgAAMAAAACABYAAAAhAAMAAAADABYAAAAhAAIAAAADABUAAAA=")
 tile_set = SubResource("TileSet_p5ayx")
 
 [node name="smoke" type="TileMapLayer" parent="." unique_id=1422536470]
-tile_map_data = PackedByteArray("AAAzAAIABQAAAAAAAAA=")
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAA0AAIABQAAAAAAAAA=")
 tile_set = SubResource("TileSet_3cl2o")
 
 [node name="bushes" type="TileMapLayer" parent="." unique_id=657027449]
