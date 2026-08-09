@@ -9541,4 +9541,4 @@ limit_right = 1152
 limit_bottom = 700
 
 [node name="CharacterBody2D" parent="." unique_id=1965066997 instance=ExtResource("17_yaehf")]
-position = Vector2(133, 296)
+position = Vector2(528, 202)

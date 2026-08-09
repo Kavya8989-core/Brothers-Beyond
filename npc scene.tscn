@@ -3,9 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://br8jywn73xfik" path="res://nps/npc-removebg-preview.png" id="1_cdoap"]
 [ext_resource type="Script" uid="uid://crwwt47vodrh1" path="res://npc_scene.gd" id="1_wy02n"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4qwv"]
+atlas = ExtResource("1_cdoap")
+region = Rect2(0, 0, 59, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgpb1"]
+atlas = ExtResource("1_cdoap")
+region = Rect2(0, 59, 59, 59)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdoap"]
 atlas = ExtResource("1_cdoap")
 region = Rect2(0, 118, 59, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kwfg"]
+atlas = ExtResource("1_cdoap")
+region = Rect2(0, 177, 59, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5b30"]
 atlas = ExtResource("1_cdoap")
@@ -75,10 +87,34 @@ region = Rect2(177, 177, 59, 59)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_e4qwv")
+}],
+"loop": 1,
+"name": &"idle down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgpb1")
+}],
+"loop": 1,
+"name": &"idle left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_cdoap")
 }],
 "loop": 1,
-"name": &"idle",
+"name": &"idle right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kwfg")
+}],
+"loop": 1,
+"name": &"idle up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -161,7 +197,7 @@ script = ExtResource("1_wy02n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=630704325]
 sprite_frames = SubResource("SpriteFrames_1sdby")
-animation = &"walking down"
+animation = &"idle down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1709821005]
 position = Vector2(0, 13)

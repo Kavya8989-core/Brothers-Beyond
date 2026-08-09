@@ -15,6 +15,7 @@ var player
 var player_is_in_chat_zone=false
 
 var dir=Vector2.RIGHT
+var direction_prefix="right"
 var start_pos
 
 
@@ -24,19 +25,20 @@ func _ready():
 	start_pos = position
 func _process(delta: float) -> void:
 	if current_state == 0 or current_state ==1:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedSprite2D.play("idle"+ direction_prefix)
 		
 	elif current_state==2 and !is_chatting:
+		
 		if dir.x>0 :
-			$AnimatedSprite2D.play("walking right")
+			direction_prefix=" right"
 		if dir.x<0 :
-			$AnimatedSprite2D.play("walking left")
+			direction_prefix=" left"
 		if dir.y<0:
-			$AnimatedSprite2D.play("walking up")
+			direction_prefix=" up"
 		if dir.y>0:
-			$AnimatedSprite2D.play("walking down")
+			direction_prefix=" down"
 			
-	
+		$AnimatedSprite2D.play("walking" + direction_prefix)
 	if is_roaming:
 		match current_state:
 			IDLE:
