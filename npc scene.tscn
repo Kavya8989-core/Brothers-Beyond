@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://br8jywn73xfik" path="res://nps/npc-removebg-preview.png" id="1_cdoap"]
 [ext_resource type="Script" uid="uid://crwwt47vodrh1" path="res://npc_scene.gd" id="1_wy02n"]
+[ext_resource type="PackedScene" uid="uid://blrwav0rvuvxf" path="res://interaction/interaction area/interaction scene.tscn" id="3_45fvo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4qwv"]
 atlas = ExtResource("1_cdoap")
@@ -186,6 +187,9 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wd65m"]
+radius = 81.21576
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1sdby"]
 radius = 18.681541
 
@@ -198,6 +202,12 @@ script = ExtResource("1_wy02n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=630704325]
 sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"idle down"
+
+[node name="InteractionScene" parent="AnimatedSprite2D" unique_id=1655195811 instance=ExtResource("3_45fvo")]
+action_name = "talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/InteractionScene" unique_id=2063248764]
+shape = SubResource("CircleShape2D_wd65m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1709821005]
 position = Vector2(0, 13)
