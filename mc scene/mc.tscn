@@ -766,8 +766,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2cqfq"]
-radius = 12.649111
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2cqfq"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=222422542]
 script = ExtResource("1_gjw6m")
@@ -779,5 +778,5 @@ sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"move_hit down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877303242]
-position = Vector2(0, 23)
-shape = SubResource("CircleShape2D_2cqfq")
+position = Vector2(0, 16)
+shape = SubResource("CapsuleShape2D_2cqfq")
