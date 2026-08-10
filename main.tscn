@@ -9931,7 +9931,8 @@ position = Vector2(854.00006, 16)
 scale = Vector2(0.52599984, 0.53)
 sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"smkoe"
-frame_progress = 0.6406826
+autoplay = "smkoe"
+frame_progress = 0.32839662
 
 [node name="house" type="TileMapLayer" parent="." unique_id=1460297323]
 y_sort_enabled = true
