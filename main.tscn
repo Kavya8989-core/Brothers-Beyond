@@ -9881,6 +9881,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1sdby"]
+radius = 5.87188
+
 [node name="terrain" type="Node2D" unique_id=1486775509]
 y_sort_enabled = true
 metadata/_edit_horizontal_guides_ = [65.0]
@@ -9966,6 +9969,10 @@ scale = Vector2(1.4062501, 1.3749999)
 sprite_frames = SubResource("SpriteFrames_ryguw")
 animation = &"walk down"
 script = ExtResource("19_getpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rab/AnimatedSprite2D" unique_id=1159268517]
+position = Vector2(0, 6.545456)
+shape = SubResource("CircleShape2D_1sdby")
 
 [node name="Timer" type="Timer" parent="rab/AnimatedSprite2D" unique_id=1778297431]
 wait_time = 2.0
