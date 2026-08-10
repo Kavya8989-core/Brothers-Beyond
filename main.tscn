@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c53xppjlpy2nx" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://65ahstemjkv8" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Wood Resource/Wood Resource.png" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://cqvaiaxgkip17" path="res://resources/download__11_-removebg-preview.png" id="10_yaehf"]
+[ext_resource type="PackedScene" uid="uid://6apoo0om5all" path="res://npc scene.tscn" id="11_getpj"]
 [ext_resource type="Texture2D" uid="uid://cbwujg04pjmuv" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="11_vivmo"]
 [ext_resource type="Texture2D" uid="uid://555n6bq6ebxv" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Idle.png" id="13_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="14_vivmo"]
@@ -9933,6 +9934,12 @@ sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"smkoe"
 autoplay = "smkoe"
 frame_progress = 0.32839662
+
+[node name="CharacterBody2D" parent="smoke/AnimatedSprite2D" unique_id=1965066997 instance=ExtResource("11_getpj")]
+position = Vector2(-667.3007, 543.3963)
+scale = Vector2(1.8, 1.8)
+
+[node name="Node" type="Node" parent="smoke/AnimatedSprite2D/CharacterBody2D" unique_id=1580231628]
 
 [node name="house" type="TileMapLayer" parent="." unique_id=1460297323]
 y_sort_enabled = true
