@@ -1,6 +1,12 @@
 extends CharacterBody2D
 @onready var raycast = $RayCast2D
 
+var dialogue = [
+	"Hey there!",
+	"What brings you here?",
+	"Be careful. There are dangerous things in these woods."
+]
+
 const SPEED=70
 enum{
 	IDLE,
@@ -23,6 +29,32 @@ var start_pos
 func _ready():
 	randomize()
 	start_pos = position
+
+	var interaction_area = get_node_or_null("Area2D")
+
+	if interaction_area == null:
+		print("❌ INTERACTION AREA NOT FOUND!")
+		print("NPC CHILDREN: ", get_children())
+		return
+
+	interaction_area.interact = Callable(self, "talk")
+
+	print("✅ INTERACTION AREA FOUND")
+	print("CALLABLE: ", interaction_area.interact)
+	print("VALID: ", interaction_area.interact.is_valid())
+	
+func talk():
+	print("🔥 NPC TALK CALLED")
+
+	is_chatting = true
+
+	var dialogue_ui = get_tree().get_first_node_in_group("dialogue_ui")
+
+	if dialogue_ui:
+		print("🔥 DIALOGUE UI FOUND")
+		dialogue_ui.start_dialogue("Old Man", dialogue)
+	else:
+		print("❌ DIALOGUE UI NOT FOUND")
 func _process(delta: float) -> void:
 	if current_state == 0 or current_state ==1:
 		$AnimatedSprite2D.play("idle"+ direction_prefix)

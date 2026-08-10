@@ -9,6 +9,7 @@ var active_areas = []
 var can_interact = true
 
 
+
 func _ready() -> void:
 	label.hide()
 
@@ -60,11 +61,23 @@ func _sort_by_distance_to_player(area1, area2):
 func _input(event):
 	if event.is_action_pressed("interact") and can_interact:
 
+		print("INTERACT PRESSED")
+
 		if active_areas.size() > 0:
+
+			print("AREA FOUND")
+			print("AREA: ", active_areas[0])
+			print("CALLABLE: ", active_areas[0].interact)
+			print("VALID: ", active_areas[0].interact.is_valid())
 
 			can_interact = false
 			label.hide()
 
-			await active_areas[0].interact()
+			var area = active_areas[0]
+
+			if area.interact.is_valid():
+				area.interact.call()
+			else:
+				print("❌ INVALID INTERACTION")
 
 			can_interact = true

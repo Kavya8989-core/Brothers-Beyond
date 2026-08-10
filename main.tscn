@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dfdsy8du0c3jg" path="res://nps/Hare/Hare_Idle_with_shadow.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dohg5wek2g6ba" path="res://nps/Hare/Hare_Walk_with_shadow.png" id="18_82xsv"]
 [ext_resource type="Script" uid="uid://jjmgyx5y2a30" path="res://rabbits.gd" id="19_getpj"]
+[ext_resource type="PackedScene" uid="uid://cwoya5bjhpccg" path="res://resources/npc dialogue.tscn" id="23_d13ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
 texture = ExtResource("4_7mycd")
@@ -9995,5 +9996,7 @@ autostart = true
 
 [node name="bg music" type="AudioStreamPlayer2D" parent="." unique_id=1397369222]
 stream = SubResource("AudioStreamMP3_ryguw")
-volume_db = 2.708
+volume_db = 16.416
 autoplay = true
+
+[node name="NpcDialogue" parent="." unique_id=579017521 groups=["dialogue_ui"] instance=ExtResource("23_d13ii")]

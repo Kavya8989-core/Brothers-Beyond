@@ -10,11 +10,11 @@ var interact: Callable = func():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("PLAYER ENTERED")
+		print("PLAYER ENTERED INTERACTION AREA")
 		InteractionManager.register_area(self)
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("PLAYER EXITED")
-		InteractionManager.unregister_area(self)
+		print("PLAYER EXITED INTERACTION AREA")
+		InteractionManager.unregister_area(self)	
