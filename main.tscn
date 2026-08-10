@@ -11,12 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://ce7mj4n6c870j" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://c53xppjlpy2nx" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://65ahstemjkv8" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Wood Resource/Wood Resource.png" id="7_w48qg"]
+[ext_resource type="Texture2D" uid="uid://blxm07f82goyc" path="res://resources/download (11).jpg" id="10_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cbwujg04pjmuv" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="11_vivmo"]
 [ext_resource type="Texture2D" uid="uid://555n6bq6ebxv" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Idle.png" id="13_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="14_vivmo"]
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="16_2cqfq"]
-[ext_resource type="PackedScene" uid="uid://6apoo0om5all" path="res://npc scene.tscn" id="17_yaehf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg77c"]
 texture = ExtResource("4_7mycd")
@@ -9313,6 +9313,11 @@ texture = ExtResource("4_7mycd")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kek77")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d13ii"]
+texture = ExtResource("10_yaehf")
+texture_region_size = Vector2i(190, 190)
+2:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("5_272bh")
 texture_region_size = Vector2i(145, 150)
@@ -9327,6 +9332,7 @@ texture_region_size = Vector2i(145, 150)
 
 [sub_resource type="TileSet" id="TileSet_3cl2o"]
 sources/5 = SubResource("TileSetAtlasSource_4c57u")
+sources/0 = SubResource("TileSetAtlasSource_d13ii")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cegan"]
 texture = ExtResource("11_vivmo")
@@ -9467,6 +9473,16 @@ texture = ExtResource("15_2cqfq")
 1:11/0 = 0
 2:11/0 = 0
 3:11/0 = 0
+3:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+6:9/0 = 0
+6:7/0 = 0
+5:7/0 = 0
+5:5/0 = 0
+5:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_1sdby"]
 sources/0 = SubResource("TileSetAtlasSource_82xsv")
@@ -9534,11 +9550,8 @@ position = Vector2(30, 292)
 
 [node name="Camera2D" type="Camera2D" parent="mc" unique_id=560879704]
 y_sort_enabled = true
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 700
-
-[node name="CharacterBody2D" parent="." unique_id=1965066997 instance=ExtResource("17_yaehf")]
-position = Vector2(528, 202)
