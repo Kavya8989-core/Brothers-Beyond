@@ -6,5 +6,12 @@
 collision_layer = 0
 script = ExtResource("1_sqsdw")
 
+[node name="Label" type="Label" parent="." unique_id=1532009729]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[Y] TO INTERACT
+"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

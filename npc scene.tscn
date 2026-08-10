@@ -222,6 +222,8 @@ shape = SubResource("CircleShape2D_3o2al")
 [node name="Timer" type="Timer" parent="." unique_id=41347577]
 autostart = true
 
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1287496216]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

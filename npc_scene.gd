@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var raycast = $RayCast2D
 
 const SPEED=70
 enum{
@@ -53,11 +53,20 @@ func choose(array):
 	return array.front()
 	
 func move(delta):
-	if !is_chatting:
-		velocity=dir*SPEED
-		move_and_slide()
-	else:
-		velocity=Vector2.ZERO
+	if is_chatting:
+		velocity = Vector2.ZERO
+		return
+
+	raycast.target_position = dir * 20
+
+	if raycast.is_colliding():
+		velocity = Vector2.ZERO
+		dir = choose([Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN])
+		current_state = MOVE
+		return
+
+	velocity = dir * SPEED
+	move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
