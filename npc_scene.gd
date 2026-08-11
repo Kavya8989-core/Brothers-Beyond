@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var raycast = $RayCast2D
+@onready var label: Label = $Label
 
 var dialogue = [
 	{"speaker": "Kevin", "text": "Hey there!"},
@@ -46,7 +47,7 @@ func _ready():
 		
 func _on_dialogue_finished():
 
-	
+
 
 	is_chatting = false
 

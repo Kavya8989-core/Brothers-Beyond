@@ -1,6 +1,7 @@
 extends Area2D
 
 class_name Interaction_area
+@onready var label: Label = $Label
 
 @export var action_name: String = "interact"
 
@@ -18,3 +19,4 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("PLAYER EXITED INTERACTION AREA")
 		InteractionManager.unregister_area(self)	
+		label.hide()
