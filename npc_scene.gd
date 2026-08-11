@@ -2,9 +2,15 @@ extends CharacterBody2D
 @onready var raycast = $RayCast2D
 
 var dialogue = [
-	"Hey there!",
-	"What brings you here?",
-	"Be careful. There are dangerous things in these woods."
+	{"speaker": "Kevin", "text": "Hey there!"},
+	{"speaker": "Arden", "text": "Hello!"},
+	{"speaker": "Kevin", "text": "Oh!! a guest. What brings you here?"},
+	{"speaker": "Arden", "text": "I'm looking for a guy maybe 5 feets tall he's lost here"},
+	{"speaker": "Kevin", "text": "Nahh"},
+	{"speaker": "Arden", "text": "Actulally he's my little brother I lost him"},
+	{"speaker": "Kevin", "text": "I guess my wife would seen him you can ask her"},
+	{"speaker": "Arden", "text": "Perfect where I can found her"},
+	{"speaker": "Kevin", "text": "She is inside the house but please dont' say that I sent you to her she is already mad at me "},
 ]
 
 const SPEED=70
@@ -33,28 +39,22 @@ func _ready():
 	var interaction_area = get_node_or_null("Area2D")
 
 	if interaction_area == null:
-		print("❌ INTERACTION AREA NOT FOUND!")
-		print("NPC CHILDREN: ", get_children())
 		return
 
 	interaction_area.interact = Callable(self, "talk")
 
-	print("✅ INTERACTION AREA FOUND")
 	print("CALLABLE: ", interaction_area.interact)
 	print("VALID: ", interaction_area.interact.is_valid())
 	
 func talk():
-	print("🔥 NPC TALK CALLED")
 
 	is_chatting = true
 
 	var dialogue_ui = get_tree().get_first_node_in_group("dialogue_ui")
 
 	if dialogue_ui:
-		print("🔥 DIALOGUE UI FOUND")
-		dialogue_ui.start_dialogue("Old Man", dialogue)
-	else:
-		print("❌ DIALOGUE UI NOT FOUND")
+		dialogue_ui.start_dialogue(dialogue)
+
 func _process(delta: float) -> void:
 	if current_state == 0 or current_state ==1:
 		$AnimatedSprite2D.play("idle"+ direction_prefix)

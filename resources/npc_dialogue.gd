@@ -15,23 +15,20 @@ func _ready():
 	hide()
 
 
-func start_dialogue(speaker_name: String, lines: Array):
-	print("START DIALOGUE CALLED")
-
+func start_dialogue(lines: Array):
 	dialogue = lines
 	current_line = 0
 	is_open = true
 
-	name_label.text = speaker_name
-	dialogue_label.text = dialogue[current_line]
-
+	show_line()
 	show()
-
-	print("DIALOGUE TEXT: ", dialogue_label.text)
 func show_line():
-	dialogue_label.text = dialogue[current_line]
-	print("CURRENT LINE: ", current_line)
-	print("TEXT: ", dialogue_label.text)
+	var line = dialogue[current_line]
+
+	name_label.text = line["speaker"]
+	dialogue_label.text = line["text"]
+
+	print(line["speaker"], ": ", line["text"])
 
 func _input(event):
 	if not is_open:
