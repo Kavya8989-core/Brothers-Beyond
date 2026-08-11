@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const walk_SPEED = 100.0
 const run_SPEED=200.0
-
+var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -10,24 +10,47 @@ var if_attacking :=false
 
 
 func _physics_process(_delta: float) -> void:
+
+	if is_in_dialogue:
+		velocity = Vector2.ZERO
+		return
+
 	if if_attacking:
 		move_and_slide()
 		return
+
 	process_animations()
+
 	var direction := Input.get_vector("left", "right", "up", "down")
-	if direction!=Vector2.ZERO:
-		check_direction=direction
+
+	if direction != Vector2.ZERO:
+		check_direction = direction
+
 		if Input.is_action_pressed("run"):
 			velocity = direction * run_SPEED
 		else:
 			velocity = direction * walk_SPEED
-	
 	else:
-		velocity=Vector2.ZERO
+		velocity = Vector2.ZERO
+
 	if Input.is_action_just_pressed("attack"):
-			attack()
+		attack()
+
 	move_and_slide()
-		
+	
+func face_target(target: Node2D):
+	var direction = target.global_position - global_position
+
+	if abs(direction.x) > abs(direction.y):
+		if direction.x > 0:
+			check_direction = Vector2.RIGHT
+		else:
+			check_direction = Vector2.LEFT
+	else:
+		if direction.y > 0:
+			check_direction = Vector2.DOWN
+		else:
+			check_direction = Vector2.UP
 func attack() -> void:
 	if_attacking = true
 	velocity=Vector2.ZERO

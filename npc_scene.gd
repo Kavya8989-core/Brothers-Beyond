@@ -5,11 +5,12 @@ var dialogue = [
 	{"speaker": "Kevin", "text": "Hey there!"},
 	{"speaker": "Arden", "text": "Hello!"},
 	{"speaker": "Kevin", "text": "Oh!! a guest. What brings you here?"},
-	{"speaker": "Arden", "text": "I'm looking for a guy maybe 5 feets tall he's lost here"},
+	{"speaker": "Arden", "text": "I'm looking for a guy maybe five feets tall he's lost here"},
 	{"speaker": "Kevin", "text": "Nahh"},
 	{"speaker": "Arden", "text": "Actulally he's my little brother I lost him"},
-	{"speaker": "Kevin", "text": "I guess my wife would seen him you can ask her"},
-	{"speaker": "Arden", "text": "Perfect where I can found her"},
+	{"speaker": "Kevin", "text": "A boy.... you say?"},
+	{"speaker": "Kevin", "text": "Actully...my wife may have been seen someone you can ask her"},
+	{"speaker": "Arden", "text": "Perfect where I can find her"},
 	{"speaker": "Kevin", "text": "She is inside the house but please dont' say that I sent you to her she is already mad at me "},
 ]
 
@@ -36,47 +37,94 @@ func _ready():
 	randomize()
 	start_pos = position
 
-	var interaction_area = get_node_or_null("Area2D")
+	$Area2D.interact = Callable(self, "talk")
 
-	if interaction_area == null:
-		return
+	var dialogue_ui = get_tree().get_first_node_in_group("dialogue_ui")
 
-	interaction_area.interact = Callable(self, "talk")
+	if dialogue_ui:
+		dialogue_ui.dialogue_finished.connect(_on_dialogue_finished)
+		
+func _on_dialogue_finished():
+	print("💬 DIALOGUE FINISHED")
 
-	print("CALLABLE: ", interaction_area.interact)
-	print("VALID: ", interaction_area.interact.is_valid())
+	is_chatting = false
+
+	if player:
+		player.is_in_dialogue = false
 	
 func talk():
 
 	is_chatting = true
+
+	if player == null:
+		player = get_tree().get_first_node_in_group("player")
+
+	if player:
+		player.is_in_dialogue = true
+		face_player()
+		player.face_target(self)
 
 	var dialogue_ui = get_tree().get_first_node_in_group("dialogue_ui")
 
 	if dialogue_ui:
 		dialogue_ui.start_dialogue(dialogue)
 
+func face_player():
+	if player == null:
+		return
+
+	var direction = player.global_position - global_position
+
+	if abs(direction.x) > abs(direction.y):
+		if direction.x > 0:
+			direction_prefix = "right"
+		else:
+			direction_prefix = "left"
+	else:
+		if direction.y > 0:
+			direction_prefix = "down"
+		else:
+			direction_prefix = "up"
+
+	$AnimatedSprite2D.play("idle" + direction_prefix)
 func _process(delta: float) -> void:
-	if current_state == 0 or current_state ==1:
-		$AnimatedSprite2D.play("idle"+ direction_prefix)
-		
-	elif current_state==2 and !is_chatting:
-		
-		if dir.x>0 :
-			direction_prefix=" right"
-		if dir.x<0 :
-			direction_prefix=" left"
-		if dir.y<0:
-			direction_prefix=" up"
-		if dir.y>0:
-			direction_prefix=" down"
-			
+
+	if is_chatting:
+		velocity = Vector2.ZERO
+		$AnimatedSprite2D.play("idle " + direction_prefix)
+		return
+
+	# Normal animation
+	if current_state == IDLE or current_state == NEW_DIR:
+		$AnimatedSprite2D.play("idle" + direction_prefix)
+
+	elif current_state == MOVE:
+
+		if dir.x > 0:
+			direction_prefix = " right"
+		elif dir.x < 0:
+			direction_prefix = " left"
+		elif dir.y < 0:
+			direction_prefix = " up"
+		elif dir.y > 0:
+			direction_prefix = " down"
+
 		$AnimatedSprite2D.play("walking" + direction_prefix)
+
+	# Normal roaming
 	if is_roaming:
 		match current_state:
 			IDLE:
 				pass
+
 			NEW_DIR:
-				dir = choose([Vector2.RIGHT, Vector2.LEFT,Vector2.UP,Vector2.DOWN])
+				dir = choose([
+					Vector2.RIGHT,
+					Vector2.LEFT,
+					Vector2.UP,
+					Vector2.DOWN
+				])
+
 			MOVE:
 				move(delta)
 				
@@ -101,14 +149,15 @@ func move(delta):
 	move_and_slide()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("player"):
-		player=body
-		player_is_in_chat_zone=true
+	if body.is_in_group("player"):
+		player = body
+		player_is_in_chat_zone = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.has_meta("player"):
-		player_is_in_chat_zone=false
+	if body.is_in_group("player"):
+		player = null
+		player_is_in_chat_zone = false
 		
 
 
