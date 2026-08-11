@@ -5,6 +5,9 @@ extends Area2D
 var level: int = 1
 var _is_in_range: bool = false
 
+func _input(event) -> void:
+	if event.is_action_pressed("interact") and _is_in_range :
+		print("level 2")
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

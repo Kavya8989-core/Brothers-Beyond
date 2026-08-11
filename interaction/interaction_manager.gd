@@ -11,22 +11,32 @@ var interaction_locked = false
 
 
 func register_area(area: Interaction_area):
+	print("REGISTER:", area)
+	
 	if not active_areas.has(area):
 		active_areas.push_back(area)
+	
+	print("ACTIVE AREAS:", active_areas.size())
 
 
 func unregister_area(area: Interaction_area):
+	print("UNREGISTER:", area)
+
 	var index = active_areas.find(area)
+
+	print("FOUND INDEX:", index)
 
 	if index != -1:
 		active_areas.remove_at(index)
 
-	# Player has left the interaction area.
-	# Allow interaction again.
-	if active_areas.size() == 0:
-		interaction_locked = false
-		can_interact = true
+	print("ACTIVE AREAS AFTER REMOVE:", active_areas.size())
 
+	if active_areas.size() == 0:
+		can_interact = true
+		interaction_locked = false
+
+	print("CAN INTERACT:", can_interact)
+	print("LOCKED:", interaction_locked)
 
 func _process(_delta: float) -> void:
 
