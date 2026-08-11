@@ -45,14 +45,19 @@ func _ready():
 		dialogue_ui.dialogue_finished.connect(_on_dialogue_finished)
 		
 func _on_dialogue_finished():
-	print("💬 DIALOGUE FINISHED")
+
+	
 
 	is_chatting = false
 
 	if player:
 		player.is_in_dialogue = false
+
+	# DO NOT unlock interaction here
 	
 func talk():
+
+	print("🔥 NPC TALK CALLED")
 
 	is_chatting = true
 
@@ -62,7 +67,6 @@ func talk():
 	if player:
 		player.is_in_dialogue = true
 		face_player()
-		player.face_target(self)
 
 	var dialogue_ui = get_tree().get_first_node_in_group("dialogue_ui")
 

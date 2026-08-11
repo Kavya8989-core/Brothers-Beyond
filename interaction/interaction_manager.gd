@@ -1,17 +1,13 @@
 extends Node2D
 
 @onready var player = get_tree().get_first_node_in_group("player")
-@onready var label: Label = $Label
+@onready var label = $Label
 
-const BASE_TEXT = "[Y] to "
+const base_text = "[Y] to "
 
 var active_areas = []
 var can_interact = true
-
-
-
-func _ready() -> void:
-	label.hide()
+var interaction_locked = false
 
 
 func register_area(area: Interaction_area):
@@ -25,17 +21,21 @@ func unregister_area(area: Interaction_area):
 	if index != -1:
 		active_areas.remove_at(index)
 
+	# Player has left the interaction area.
+	# Allow interaction again.
+	if active_areas.size() == 0:
+		interaction_locked = false
+		can_interact = true
 
-func _process(delta: float) -> void:
-	if player == null:
-		return
 
-	if active_areas.size() > 0 and can_interact:
+func _process(_delta: float) -> void:
+
+	if active_areas.size() > 0 and can_interact and !interaction_locked:
+
 		active_areas.sort_custom(_sort_by_distance_to_player)
 
-		label.text = "[Y] to " + active_areas[0].action_name
+		label.text = base_text + active_areas[0].action_name
 
-		# Follow the NPC's interaction area
 		label.global_position = active_areas[0].global_position
 		label.global_position.y -= 36
 		label.global_position.x -= label.size.x / 2
@@ -47,6 +47,7 @@ func _process(delta: float) -> void:
 
 
 func _sort_by_distance_to_player(area1, area2):
+
 	var area1_to_player = player.global_position.distance_to(
 		area1.global_position
 	)
@@ -59,25 +60,17 @@ func _sort_by_distance_to_player(area1, area2):
 
 
 func _input(event):
+
 	if event.is_action_pressed("interact") and can_interact:
 
-		print("INTERACT PRESSED")
-
 		if active_areas.size() > 0:
-
-			print("AREA FOUND")
-			print("AREA: ", active_areas[0])
-			print("CALLABLE: ", active_areas[0].interact)
-			print("VALID: ", active_areas[0].interact.is_valid())
-
-			can_interact = false
-			label.hide()
 
 			var area = active_areas[0]
 
 			if area.interact.is_valid():
-				area.interact.call()
-			else:
-				print("❌ INVALID INTERACTION")
 
-			can_interact = true
+				can_interact = false
+				interaction_locked = true
+				label.hide()
+
+				area.interact.call()
