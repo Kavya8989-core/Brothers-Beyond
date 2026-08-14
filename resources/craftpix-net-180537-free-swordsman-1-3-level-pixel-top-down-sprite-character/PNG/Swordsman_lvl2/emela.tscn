@@ -202,9 +202,11 @@ height = 16.0
 radius = 21.023796
 
 [node name="Emela" type="CharacterBody2D" unique_id=39134437]
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_qdduh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2046810322]
+scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"idle left"
 frame = 5
@@ -221,3 +223,13 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=975789539]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_1sdby")
+
+[node name="Label" type="Label" parent="." unique_id=1624147587]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 10
+text = "[Y] TO INTERACT"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
