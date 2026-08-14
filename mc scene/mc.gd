@@ -6,7 +6,8 @@ var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
+var _health : int = 100
+var _damage : int = 20
 
 
 func _physics_process(_delta: float) -> void:

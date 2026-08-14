@@ -6,7 +6,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 var current_direction : String = "left"
 var is_in_range : bool =false
-
+var health : int = 50
 func process_animaiton() -> void:
 	animated_sprite_2d.play("idle " + current_direction)
 	

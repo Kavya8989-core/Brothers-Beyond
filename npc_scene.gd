@@ -21,6 +21,7 @@ enum{
 	NEW_DIR,
 	MOVE
 }
+var health : int = 50
 var current_state=IDLE
 var is_roaming = true
 var is_chatting = false
@@ -32,6 +33,9 @@ var dir=Vector2.RIGHT
 var direction_prefix="right"
 var start_pos
 
+func takes_tattack() -> void:
+	if player.attack() :
+		health = health - 20
 
 
 func _ready():
@@ -54,11 +58,10 @@ func _on_dialogue_finished():
 	if player:
 		player.is_in_dialogue = false
 
-	# DO NOT unlock interaction here
+	
 	
 func talk():
 
-	print("🔥 NPC TALK CALLED")
 
 	is_chatting = true
 

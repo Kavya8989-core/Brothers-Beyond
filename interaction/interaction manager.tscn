@@ -15,5 +15,5 @@ offset_right = 70.5
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 16
-text = "press Y to interact"
+text = " [Y] TO  INTERACT"
 horizontal_alignment = 1
