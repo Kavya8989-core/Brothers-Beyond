@@ -8,6 +8,10 @@ var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var _health : int = 100
 var _damage : int = 20
+func _ready() -> void:
+	if GameManager.is_position_saved:
+		await get_tree().process_frame
+		global_position = GameManager.player_position
 
 
 func _physics_process(_delta: float) -> void:
