@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1nm87mrwg5xm" path="res://interaction/interaction_manager.gd" id="1_830nm"]
 
-[node name="InteractionManager" type="Node2D" unique_id=1052351110]
+[node name="InteractionManager" type="CanvasLayer" unique_id=1341752552]
 script = ExtResource("1_830nm")
 
 [node name="Label" type="Label" parent="." unique_id=2053695026]

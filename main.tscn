@@ -9652,14 +9652,12 @@ autoplay = "smkoe"
 frame_progress = 0.32839662
 
 [node name="CharacterBody2D" parent="smoke/AnimatedSprite2D" unique_id=1965066997 instance=ExtResource("11_getpj")]
-position = Vector2(-374.52496, 564.15094)
+position = Vector2(-359.3158, 592.4529)
 scale = Vector2(1.8, 1.8)
 
 [node name="Node" type="Node" parent="smoke/AnimatedSprite2D/CharacterBody2D" unique_id=1580231628]
 
 [node name="InteractionManager" parent="smoke/AnimatedSprite2D/CharacterBody2D" unique_id=1052351110 instance=ExtResource("12_ryguw")]
-visible = false
-position = Vector2(-5.280948, -28.301922)
 
 [node name="house" type="TileMapLayer" parent="." unique_id=1460297323]
 y_sort_enabled = true
@@ -9675,7 +9673,7 @@ tile_set = SubResource("TileSet_knnpy")
 
 [node name="mc" parent="." unique_id=222422542 instance=ExtResource("16_2cqfq")]
 z_index = 2
-position = Vector2(41, 289)
+position = Vector2(26, 293)
 
 [node name="Camera2D" type="Camera2D" parent="mc" unique_id=560879704]
 y_sort_enabled = true

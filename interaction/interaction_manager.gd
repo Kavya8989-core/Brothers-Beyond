@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var label = $Label
@@ -8,7 +8,9 @@ const base_text = "[Y] to "
 var active_areas = []
 var can_interact = true
 var interaction_locked = false
-
+func position_label_near_npc(area: Interaction_area) -> void:
+	label.global_position = area.global_position + Vector2(-40, -20)
+	
 func register_area(area: Interaction_area) -> void:
 	print("REGISTER CALLED BY: ", area.name)
 
@@ -28,16 +30,12 @@ func unlock_interaction():
 
 
 func _process(_delta: float) -> void:
-	print("ACTIVE AREAS: ", active_areas.size())
-
 	if active_areas.size() > 0:
-		print("SHOWING LABEL")
+		position_label_near_npc(active_areas[0])
 		label.show()
 		label.text = "[Y] to " + active_areas[0].action_name
 	else:
-		print("HIDING LABEL")
 		label.hide()
-
 
 func _input(event):
 
