@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwvkrcsgyvtlf" path="res://resources/craftpix-net-180537-free-swordsman-1-3-level-pixel-top-down-sprite-character/PNG/Swordsman_lvl2/emela.gd" id="1_qdduh"]
 [ext_resource type="Texture2D" uid="uid://c43kkuu017qfa" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Amelia_idle_anim_16x16.png" id="2_mq7qg"]
+[ext_resource type="PackedScene" uid="uid://cl5daysbe2t5a" path="res://npc dialoge manager.tscn" id="3_mq7qg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qi26"]
 atlas = ExtResource("2_mq7qg")
@@ -230,6 +231,8 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 10
 text = "[Y] TO INTERACT"
+
+[node name="dialogue gd" parent="." unique_id=1132192875 instance=ExtResource("3_mq7qg")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cl5daysbe2t5a"]
 
+[ext_resource type="Script" uid="uid://dq4nldyykiiks" path="res://npc_dialoge_manager.gd" id="1_qlqis"]
+
 [node name="dialogue gd" type="CanvasLayer" unique_id=1132192875]
+script = ExtResource("1_qlqis")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594509154]
 offset_right = 40.0
