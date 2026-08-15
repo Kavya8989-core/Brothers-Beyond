@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const walk_SPEED = 100.0
 const run_SPEED=200.0
+
 var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
@@ -9,9 +10,17 @@ var if_attacking :=false
 var _health : int = 100
 var _damage : int = 20
 func _ready() -> void:
-	if GameManager.is_position_saved:
-		await get_tree().process_frame
-		global_position = GameManager.player_position
+	if get_tree().current_scene.scene_file_path == "res://main.tscn":
+		if GameManager.returning_from_house:
+			await get_tree().process_frame
+
+			var spawn_point = get_tree().current_scene.get_node("Marker2D")
+
+			global_position = spawn_point.global_position
+
+			print("SPAWNED AT HOUSE EXIT: ", global_position)
+
+			GameManager.returning_from_house = false
 
 
 func _physics_process(_delta: float) -> void:

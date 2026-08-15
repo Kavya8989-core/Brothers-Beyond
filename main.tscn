@@ -10028,5 +10028,8 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "[Y] to enter"
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=220906492]
+position = Vector2(802, 177)
+
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]
