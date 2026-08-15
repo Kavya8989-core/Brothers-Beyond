@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4nfogjr6cdaq" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_m1dnj"]
 [ext_resource type="Texture2D" uid="uid://cmrumdhau6lx3" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://dk7n6gngigqg2" path="res://resources/cobble.jpg" id="3_hmp44"]
+[ext_resource type="Script" uid="uid://w1840gfisrnt" path="res://again level 1.gd" id="4_26ho8"]
 [ext_resource type="Texture2D" uid="uid://bw1tjjuavavye" path="res://resources/light source.jpg" id="4_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="5_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://cycklva2xqwmn" path="res://resources/craftpix-net-180537-free-swordsman-1-3-level-pixel-top-down-sprite-character/PNG/Swordsman_lvl2/emela.tscn" id="6_tfy05"]
@@ -8896,11 +8897,19 @@ tile_set = SubResource("TileSet_qwxpy")
 
 [node name="Area2D" type="Area2D" parent="door" unique_id=1712987498]
 position = Vector2(239.5, 211.5)
+script = ExtResource("4_26ho8")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door/Area2D" unique_id=480579726]
 position = Vector2(-0.25, -11.75)
 shape = SubResource("RectangleShape2D_3o2al")
+
+[node name="Label" type="Label" parent="door/Area2D" unique_id=1721001698]
+visible = false
+offset_right = 126.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 10
+text = "[Y] TO INTERACT"
 
 [node name="wall boundary" type="TileMapLayer" parent="." unique_id=277622428]
 scale = Vector2(2, 2)
@@ -8975,3 +8984,6 @@ tile_set = SubResource("TileSet_5tyra")
 [node name="Emela" parent="." unique_id=39134437 instance=ExtResource("6_tfy05")]
 position = Vector2(113, 234)
 scale = Vector2(1.7, 1.7)
+
+[connection signal="body_entered" from="door/Area2D" to="door/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="door/Area2D" to="door/Area2D" method="_on_body_exited"]

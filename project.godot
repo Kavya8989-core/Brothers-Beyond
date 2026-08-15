@@ -24,6 +24,10 @@ InteractionManager="*uid://b3e3f63ewsblm"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+player=""
+
 [input]
 
 left={

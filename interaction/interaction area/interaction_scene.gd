@@ -15,10 +15,8 @@ func _on_body_entered(body):
 		InteractionManager.register_area(self)
 
 
-
-
-
 func _on_body_exited(body: Node2D) -> void:
+
 	if body.is_in_group("player"):
 		print("PLAYER EXITED")
 		InteractionManager.unregister_area(self)
