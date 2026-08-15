@@ -6,14 +6,17 @@
 script = ExtResource("1_qlqis")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594509154]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 100.0
+offset_top = 400.0
+offset_right = 700.0
+offset_bottom = 550.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=93884434]
 layout_mode = 2
 
-[node name="name Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=37675624]
+[node name="speakerLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=37675624]
 layout_mode = 2
 
-[node name="dialoge Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2100335824]
+[node name="dialogueLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2100335824]
 layout_mode = 2
+text = "TEST DIALOGUE"
