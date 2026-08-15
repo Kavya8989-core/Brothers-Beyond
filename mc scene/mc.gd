@@ -10,6 +10,8 @@ var if_attacking :=false
 var _health : int = 100
 var _damage : int = 20
 func _ready() -> void:
+	print("RETURNING FROM HOUSE: ", GameManager.returning_from_house)
+
 	if get_tree().current_scene.scene_file_path == "res://main.tscn":
 		if GameManager.returning_from_house:
 			await get_tree().process_frame

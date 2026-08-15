@@ -32,10 +32,7 @@ var player_is_in_chat_zone=false
 var dir=Vector2.RIGHT
 var direction_prefix="right"
 var start_pos
-
-func takes_tattack() -> void:
-	if player.attack() :
-		health = health - 20
+var is_in_dialogue : bool = false
 
 
 func _ready():
@@ -48,15 +45,13 @@ func _ready():
 
 	if dialogue_ui:
 		dialogue_ui.dialogue_finished.connect(_on_dialogue_finished)
-		
 func _on_dialogue_finished():
-
-
-
 	is_chatting = false
 
 	if player:
 		player.is_in_dialogue = false
+
+	InteractionManager.unlock_interaction()
 
 	
 	
@@ -160,6 +155,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = body
 		player_is_in_chat_zone = true
+		label.show()
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

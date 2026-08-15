@@ -6,6 +6,7 @@
 script = ExtResource("1_830nm")
 
 [node name="Label" type="Label" parent="." unique_id=2053695026]
+visible = false
 z_index = 100
 anchors_preset = 5
 anchor_left = 0.5

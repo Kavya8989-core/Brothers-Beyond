@@ -193,7 +193,7 @@ radius = 18.681541
 [sub_resource type="CircleShape2D" id="CircleShape2D_3o2al"]
 radius = 52.086468
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1965066997 groups=["player"]]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1965066997]
 script = ExtResource("1_wy02n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=630704325]
@@ -216,6 +216,6 @@ autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1287496216]
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
