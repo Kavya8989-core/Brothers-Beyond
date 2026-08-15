@@ -30,7 +30,7 @@ var dialogue = [
 	{"speaker": "Arden", "text": "Then tell me what I need to know."},
 	{"speaker": "Amelia", "text": "I can't show you the way. I've never traveled that far."},
 	{"speaker": "Amelia", "text": "But perhaps he can."},
-	{"speaker": "Arden", "text": "A bird?"},
+	{"speaker": "Arden", "text": "A fox?"},
 	{"speaker": "Amelia", "text": "Don't underestimate him."},
 	{"speaker": "Amelia", "text": "He's been with me for years. He's traveled farther into this world than I ever could."},
 	{"speaker": "Amelia", "text": "He knows the paths, the dangers... even some of the creatures."},
