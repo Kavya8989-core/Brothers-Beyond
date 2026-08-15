@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cl5daysbe2t5a"]
+
+[node name="dialogue gd" type="CanvasLayer" unique_id=1132192875]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1594509154]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=93884434]
+layout_mode = 2
+
+[node name="name Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=37675624]
+layout_mode = 2
+
+[node name="dialoge Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2100335824]
+layout_mode = 2
