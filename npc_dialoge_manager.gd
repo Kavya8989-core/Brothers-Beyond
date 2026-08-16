@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var speaker_label: Label = $PanelContainer/VBoxContainer/speakerLabel
 @onready var dialogue_label: Label = $PanelContainer/VBoxContainer/dialogueLabel
 
-
+var is_dialogue_over : bool =false
 var dialogue = []
 var current_line: int = 0
 var is_dialogue_active: bool = false
@@ -17,6 +17,8 @@ func start_dialogue(new_dialogue: Array) -> void:
 	dialogue = new_dialogue
 	current_line = 0
 	is_dialogue_active = true
+	is_dialogue_over = false
+	print("start line is called")
 
 	show()
 	display_line()
@@ -35,6 +37,7 @@ func _input(event: InputEvent) -> void:
 		current_line += 1
 		get_viewport().set_input_as_handled()
 		if current_line >= dialogue.size():
+			print("last line reached")
 			end_dialogue()
 		else:
 			display_line()
@@ -42,4 +45,6 @@ func _input(event: InputEvent) -> void:
 
 func end_dialogue() -> void:
 	is_dialogue_active = false
+	is_dialogue_over = true
+	print("is_dialogue over ", is_dialogue_over)
 	hide()

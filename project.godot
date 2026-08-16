@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 InteractionManager="*uid://b3e3f63ewsblm"
 GameManager="*uid://dfx77kbbvfni8"
-DialogueManager="*uid://dq4nldyykiiks"
+DialogueManager="*uid://cl5daysbe2t5a"
 
 [display]
 

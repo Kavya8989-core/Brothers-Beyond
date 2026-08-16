@@ -2,7 +2,6 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var label: Label = $Label
 @onready var player = get_tree().get_first_node_in_group("player")
-@onready var dialogue_gd: CanvasLayer = $"dialogue gd"
 
 
 
@@ -52,7 +51,7 @@ func process_animaiton() -> void:
 	animated_sprite_2d.play("idle " + current_direction)
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and is_in_range and not dialogue_gd.is_dialogue_active:
+	if event.is_action_pressed("interact") and is_in_range and not DialogueManager.is_dialogue_active:
 
 		if player.global_position.x > global_position.x:
 			current_direction = "right"
@@ -65,7 +64,7 @@ func _input(event: InputEvent) -> void:
 
 		print("Starting dialogue")
 
-		dialogue_gd.start_dialogue(dialogue)
+		DialogueManager.start_dialogue(dialogue)
 func _process(delta: float) -> void:
 	process_animaiton()
 	
