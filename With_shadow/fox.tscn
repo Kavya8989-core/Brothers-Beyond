@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://h6576fcfqrth"]
 
 [ext_resource type="Texture2D" uid="uid://rx6xhj1ovgsw" path="res://With_shadow/craftpix-net-789196-free-top-down-hunt-animals-pixel-sprite-pack/PNG/With_Shadow/Fox/Fox_Death_with_shadow.png" id="1_00wb3"]
+[ext_resource type="Script" uid="uid://bf4gv47u7j0es" path="res://With_shadow/fox.gd" id="1_3aifc"]
 [ext_resource type="Texture2D" uid="uid://d0oxhplvihix2" path="res://With_shadow/craftpix-net-789196-free-top-down-hunt-animals-pixel-sprite-pack/PNG/With_Shadow/Fox/Fox_Hurt_with_shadow.png" id="2_3aifc"]
 [ext_resource type="Texture2D" uid="uid://b158w5wpklr0l" path="res://With_shadow/craftpix-net-789196-free-top-down-hunt-animals-pixel-sprite-pack/PNG/With_Shadow/Fox/Fox_Idle_with_shadow.png" id="3_76xny"]
 [ext_resource type="Texture2D" uid="uid://cbhtid5d8q3w" path="res://With_shadow/craftpix-net-789196-free-top-down-hunt-animals-pixel-sprite-pack/PNG/With_Shadow/Fox/Fox_Run_with_shadow.png" id="4_a8xa6"]
@@ -837,8 +838,17 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1sdby"]
+radius = 4.0
+height = 12.0
+
 [node name="Fox" type="CharacterBody2D" unique_id=2031372852]
+script = ExtResource("1_3aifc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=187925369]
 sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"death down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1875539774]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_1sdby")

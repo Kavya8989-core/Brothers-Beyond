@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bw1tjjuavavye" path="res://resources/light source.jpg" id="4_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="5_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://cycklva2xqwmn" path="res://resources/craftpix-net-180537-free-swordsman-1-3-level-pixel-top-down-sprite-character/PNG/Swordsman_lvl2/emela.tscn" id="6_tfy05"]
+[ext_resource type="PackedScene" uid="uid://h6576fcfqrth" path="res://With_shadow/fox.tscn" id="7_6phv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
 texture = ExtResource("1_m1dnj")
@@ -8981,9 +8982,14 @@ scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AAAOAAoAAAAHAA8AAAAOAAsAAAAHABAAAAAOAAwAAAAHABEAAAAPAAoAAAAIAA8AAAAPAAsAAAAIABAAAAAPAAwAAAAIABEAAAAQAAoAAAAJAA8AAAAQAAsAAAAJABAAAAAQAAwAAAAJABEAAAARAAoAAAAKAA8AAAARAAsAAAAKABAAAAARAAwAAAAKABEAAAAWAAoAAAAHAA8AAAAWAAsAAAAHABAAAAAWAAwAAAAHABEAAAAXAAoAAAAIAA8AAAAXAAsAAAAIABAAAAAXAAwAAAAIABEAAAAYAAoAAAAJAA8AAAAYAAsAAAAJABAAAAAYAAwAAAAJABEAAAAZAAoAAAAKAA8AAAAZAAsAAAAKABAAAAAZAAwAAAAKABEAAAA=")
 tile_set = SubResource("TileSet_5tyra")
 
+[node name="Fox" parent="carpets" unique_id=2031372852 instance=ExtResource("7_6phv7")]
+position = Vector2(432.00003, 206)
+
 [node name="Emela" parent="." unique_id=39134437 instance=ExtResource("6_tfy05")]
 position = Vector2(113, 234)
 scale = Vector2(1.7, 1.7)
+
+[node name="Fox" parent="." unique_id=1409838907 instance=ExtResource("7_6phv7")]
 
 [connection signal="body_entered" from="door/Area2D" to="door/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="door/Area2D" to="door/Area2D" method="_on_body_exited"]

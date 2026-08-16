@@ -68,6 +68,7 @@ func _input(event: InputEvent) -> void:
 		dialogue_gd.start_dialogue(dialogue)
 func _process(delta: float) -> void:
 	process_animaiton()
+	
 
 
 
