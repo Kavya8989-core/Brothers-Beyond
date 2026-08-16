@@ -5,6 +5,7 @@ const run_SPEED=200.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
+	animated_sprite_2d.play("idle down")
 	if DialogueManager.is_dialogue_over:
 		var direction = global_position.direction_to(player.global_position)
 
