@@ -8983,7 +8983,7 @@ tile_map_data = PackedByteArray("AAAOAAoAAAAHAA8AAAAOAAsAAAAHABAAAAAOAAwAAAAHABE
 tile_set = SubResource("TileSet_5tyra")
 
 [node name="Fox" parent="carpets" unique_id=2031372852 instance=ExtResource("7_6phv7")]
-position = Vector2(432.00003, 206)
+position = Vector2(104.66666, 106.66667)
 
 [node name="Emela" parent="." unique_id=39134437 instance=ExtResource("6_tfy05")]
 position = Vector2(113, 234)
