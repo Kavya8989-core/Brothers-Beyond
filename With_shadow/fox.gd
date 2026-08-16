@@ -5,21 +5,30 @@ const run_SPEED=200.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	animated_sprite_2d.play("idle down")
+
 	if DialogueManager.is_dialogue_over:
-		var direction = global_position.direction_to(player.global_position)
 
-		velocity = direction * walk_SPEED
+		var follow_distance = global_position.distance_to(player.global_position)
 
-		if abs(direction.x) > abs(direction.y):
-			if direction.x > 0:
-				animated_sprite_2d.play("walk right")
+		if follow_distance > 50:
+			var direction = global_position.direction_to(player.global_position)
+
+			velocity = direction * walk_SPEED
+
+			if abs(direction.x) > abs(direction.y):
+				if direction.x > 0:
+					animated_sprite_2d.play("walk right")
+				else:
+					animated_sprite_2d.play("walk left")
 			else:
-				animated_sprite_2d.play("walk left")
+				if direction.y > 0:
+					animated_sprite_2d.play("walk down")
+				else:
+					animated_sprite_2d.play("walk up")
+
+			move_and_slide()
 		else:
-			if direction.y > 0:
-				animated_sprite_2d.play("walk down")
-			else:
-				animated_sprite_2d.play("walk up")
+			velocity = Vector2.ZERO
 
-		move_and_slide()
+			move_and_slide()
+			animated_sprite_2d.play("idle down")
