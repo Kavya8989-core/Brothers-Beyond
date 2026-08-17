@@ -53,8 +53,9 @@ func end_dialogue() -> void:
 	speaker_label.hide()
 	dialogue_label.hide()
 func close_dialogue() -> void:
+	print("🔥 CLOSE DIALOGUE CALLED")
+
 	is_dialogue_active = false
-	is_dialogue_over = true
 	dialogue.clear()
 	current_line = 0
 
