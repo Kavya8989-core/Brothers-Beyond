@@ -47,7 +47,6 @@ func _ready():
 		dialogue_ui.dialogue_finished.connect(_on_dialogue_finished)
 func _on_dialogue_finished():
 	is_chatting = false
-
 	if player:
 		player.is_in_dialogue = false
 
@@ -162,6 +161,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player = null
 		player_is_in_chat_zone = false
+		label.hide()
 		
 
 

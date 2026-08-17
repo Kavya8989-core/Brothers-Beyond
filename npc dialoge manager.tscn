@@ -15,8 +15,10 @@ offset_bottom = 550.0
 layout_mode = 2
 
 [node name="speakerLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=37675624]
+visible = false
 layout_mode = 2
 
 [node name="dialogueLabel" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2100335824]
+visible = false
 layout_mode = 2
 text = "TEST DIALOGUE"
