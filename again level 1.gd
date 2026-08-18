@@ -10,6 +10,7 @@ func _input(event: InputEvent) -> void:
 		GameManager.returning_from_house = true
 		DialogueManager.close_dialogue()
 		GameManager.fox_coming_out = true
+		DialogueManager.is_dialogue_active == false
 		get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_body_entered(body: Node2D) -> void:

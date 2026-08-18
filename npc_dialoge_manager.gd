@@ -19,8 +19,6 @@ func start_dialogue(new_dialogue: Array) -> void:
 	is_dialogue_active = true
 	is_dialogue_over = false
 
-	print("🔥 DIALOGUE ACTIVE = ", is_dialogue_active)
-
 	speaker_label.show()
 	dialogue_label.show()
 
@@ -49,7 +47,9 @@ func _input(event: InputEvent) -> void:
 func end_dialogue() -> void:
 	is_dialogue_active = false
 	is_dialogue_over = true
-	print("is_dialogue over ", is_dialogue_over)
+
+	GameManager.fox_can_follow = true
+
 	hide()
 	speaker_label.hide()
 	dialogue_label.hide()

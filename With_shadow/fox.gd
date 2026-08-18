@@ -7,23 +7,17 @@ const walk_SPEED = 70.0
 var player: CharacterBody2D
 
 
-func _ready() -> void:
-	print("🦊 FOX CREATED: ", get_path())
-
-
 func _physics_process(_delta: float) -> void:
 
 	if player == null:
 		player = get_tree().get_first_node_in_group("player")
 		return
 
-	# FOX STAYS STILL UNTIL DIALOGUE IS FINISHED
-	if not DialogueManager.is_dialogue_over:
+	if not GameManager.fox_can_follow:
 		velocity = Vector2.ZERO
 		animated_sprite_2d.play("idle down")
 		return
 
-	# FOLLOW MC AFTER DIALOGUE
 	var follow_distance = global_position.distance_to(player.global_position)
 
 	if follow_distance > 50:
