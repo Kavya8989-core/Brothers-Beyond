@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 var dialogue = [
 	{"speaker": "Amelia", "text": "You're not from around here... are you?"},
-	{"speaker": "Arden", "text": "No. I'm looking for my little brother."},
+	{"speaker": "Arden", "text": " I'm looking for my little brother."},
 	{"speaker": "Amelia", "text": "Your little brother..."},
 	{"speaker": "Arden", "text": "A man named Kevin told me you might know where he is."},
 	{"speaker": "Amelia", "text": "Kevin... I see."},
