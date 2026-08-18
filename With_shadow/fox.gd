@@ -3,9 +3,12 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const walk_SPEED = 70.0
-const run_SPEED = 200.0
 
 var player: CharacterBody2D
+
+
+func _ready() -> void:
+	print("🦊 FOX CREATED: ", get_path())
 
 
 func _physics_process(_delta: float) -> void:
@@ -14,11 +17,13 @@ func _physics_process(_delta: float) -> void:
 		player = get_tree().get_first_node_in_group("player")
 		return
 
-	if DialogueManager.is_dialogue_active:
+	# FOX STAYS STILL UNTIL DIALOGUE IS FINISHED
+	if not DialogueManager.is_dialogue_over:
 		velocity = Vector2.ZERO
 		animated_sprite_2d.play("idle down")
 		return
 
+	# FOLLOW MC AFTER DIALOGUE
 	var follow_distance = global_position.distance_to(player.global_position)
 
 	if follow_distance > 50:

@@ -18,13 +18,14 @@ func start_dialogue(new_dialogue: Array) -> void:
 	current_line = 0
 	is_dialogue_active = true
 	is_dialogue_over = false
-	print("start line is called")
+
+	print("🔥 DIALOGUE ACTIVE = ", is_dialogue_active)
+
 	speaker_label.show()
 	dialogue_label.show()
 
 	show()
 	display_line()
-
 
 func display_line() -> void:
 	print("Speaker Label: ", speaker_label)
@@ -53,9 +54,8 @@ func end_dialogue() -> void:
 	speaker_label.hide()
 	dialogue_label.hide()
 func close_dialogue() -> void:
-	print("🔥 CLOSE DIALOGUE CALLED")
-
 	is_dialogue_active = false
+	is_dialogue_over = false
 	dialogue.clear()
 	current_line = 0
 
