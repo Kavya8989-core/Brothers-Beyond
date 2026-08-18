@@ -9,6 +9,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and _is_in_range:
 		GameManager.returning_from_house = true
 		DialogueManager.close_dialogue()
+		GameManager.fox_coming_out = true
 		get_tree().change_scene_to_file("res://main.tscn")
 
 func _on_body_entered(body: Node2D) -> void:

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bsewnr15x0yw"]
 
 [ext_resource type="Texture2D" uid="uid://b1wd6ck56488a" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color2.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cyapa7elyyfti" path="res://main.gd" id="1_getpj"]
 [ext_resource type="Texture2D" uid="uid://bsn0n2nvryose" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dihtubnx5lrv" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Foam.png" id="3_5vw27"]
 [ext_resource type="Texture2D" uid="uid://fuugoqsqg76j" path="res://Tiny Swords (Free Pack)/Particle FX/Water Splash.png" id="3_kek77"]
@@ -18,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="14_vivmo"]
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="16_2cqfq"]
-[ext_resource type="PackedScene" uid="uid://h6576fcfqrth" path="res://With_shadow/fox.tscn" id="21_getpj"]
 [ext_resource type="PackedScene" uid="uid://cwoya5bjhpccg" path="res://resources/npc dialogue.tscn" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://dc1iosbjjplno" path="res://lev_2.gd" id="24_1u8w0"]
 
@@ -9604,6 +9604,7 @@ size = Vector2(36, 50)
 
 [node name="terrain" type="Node2D" unique_id=1486775509]
 y_sort_enabled = true
+script = ExtResource("1_getpj")
 metadata/_edit_horizontal_guides_ = [65.0]
 
 [node name="stream" type="TileMapLayer" parent="." unique_id=1925968618]
@@ -9714,10 +9715,11 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "[Y] to enter"
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=220906492]
+[node name="spawn_point" type="Marker2D" parent="." unique_id=220906492]
 position = Vector2(802, 177)
 
-[node name="Fox" parent="." unique_id=2031372852 instance=ExtResource("21_getpj")]
+[node name="FoxSpawnPoint" type="Marker2D" parent="." unique_id=329851943]
+position = Vector2(839, 181)
 
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]

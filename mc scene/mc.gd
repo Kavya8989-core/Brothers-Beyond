@@ -16,7 +16,7 @@ func _ready() -> void:
 		if GameManager.returning_from_house:
 			await get_tree().process_frame
 
-			var spawn_point = get_tree().current_scene.get_node("Marker2D")
+			var spawn_point = get_tree().current_scene.get_node("spawn_point")
 
 			global_position = spawn_point.global_position
 
