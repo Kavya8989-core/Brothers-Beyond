@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://4b84tkqxevlo" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color1.png" id="2_66l31"]
 [ext_resource type="Texture2D" uid="uid://dihtubnx5lrv" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Foam.png" id="2_gange"]
 [ext_resource type="Texture2D" uid="uid://dq8hr6ovp3epl" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color4.png" id="3_66l31"]
+[ext_resource type="Texture2D" uid="uid://cf58wuvxsjx3c" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree4.png" id="5_3am4v"]
+[ext_resource type="Texture2D" uid="uid://bsn0n2nvryose" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="6_2mecw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("1_leqt3")
@@ -1104,6 +1106,38 @@ terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_3am4v")
 sources/1 = SubResource("TileSetAtlasSource_2mecw")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gt6bn"]
+texture = ExtResource("5_3am4v")
+texture_region_size = Vector2i(192, 192)
+0:0/animation_speed = 5.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6o2x3"]
+texture = ExtResource("6_2mecw")
+texture_region_size = Vector2i(192, 192)
+0:0/animation_speed = 5.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xi4lh"]
+sources/0 = SubResource("TileSetAtlasSource_gt6bn")
+sources/1 = SubResource("TileSetAtlasSource_6o2x3")
+
 [node name="Scene3" type="Node2D" unique_id=484648831]
 
 [node name="water" type="TileMapLayer" parent="." unique_id=188365194]
@@ -1121,3 +1155,7 @@ tile_set = SubResource("TileSet_hpeu2")
 [node name="cliffs" type="TileMapLayer" parent="." unique_id=1835953544]
 tile_map_data = PackedByteArray("AAAOAAIAAAAFAAAAAAAPAAIAAAAGAAAAAAAQAAIAAAAHAAAAAAAQAAMAAAAHAAEAAAAQAAQAAAAHAAIAAAAPAAQAAAAGAAIAAAAOAAQAAAAFAAIAAAAOAAMAAAAFAAEAAAAPAAMAAAAGAAEAAAAOAAUAAAAFAAQAAAAPAAUAAAAGAAQAAAAQAAUAAAAHAAQAAAADAAMAAAAGAAQAAAAEAAMAAAAHAAQAAAAHAAIAAAAIAAMAAAAHAAMAAAAIAAUAAAAEAAcAAAAFAAAAAAAFAAcAAAAGAAAAAAAGAAcAAAAHAAAAAAAGAAgAAAAHAAIAAAAEAAgAAAAFAAIAAAAFAAgAAAAGAAIAAAAEAAkAAAAFAAQAAAAFAAkAAAAGAAQAAAAGAAkAAAAHAAUAAAACAAMAAAAFAAQAAAAEAAAAAAAHAAAAAAADAAAAAAAGAAAAAAADAAEAAAAGAAEAAAACAAAAAAAFAAAAAAACAAEAAAAFAAEAAAADAAIAAAAGAAIAAAACAAIAAAAFAAIAAAAEAAIAAAAHAAIAAAAEAAEAAAAHAAEAAAA=")
 tile_set = SubResource("TileSet_454ae")
+
+[node name="trees" type="TileMapLayer" parent="." unique_id=693978339]
+tile_map_data = PackedByteArray("AAAQAA8AAAAAAAAAAAA5ABkAAAAAAAAAAAApAAgAAQAAAAAAAAAVAB0AAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_xi4lh")
