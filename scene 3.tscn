@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bsn0n2nvryose" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="6_2mecw"]
 [ext_resource type="Texture2D" uid="uid://ce7mj4n6c870j" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png" id="7_yo1up"]
 [ext_resource type="Texture2D" uid="uid://cbwujg04pjmuv" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="8_gt6bn"]
+[ext_resource type="Texture2D" uid="uid://ohtwl8kmbt7e" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png" id="9_gt6bn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("1_leqt3")
@@ -1172,6 +1173,31 @@ texture_region_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_lo4rd")
 sources/1 = SubResource("TileSetAtlasSource_u2k5a")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvvj8"]
+texture = ExtResource("9_gt6bn")
+texture_region_size = Vector2i(64, 64)
+0:0/animation_speed = 5.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_n1mkj"]
+sources/1 = SubResource("TileSetAtlasSource_yvvj8")
+
 [node name="Scene3" type="Node2D" unique_id=484648831]
 
 [node name="water" type="TileMapLayer" parent="." unique_id=188365194]
@@ -1197,3 +1223,7 @@ tile_set = SubResource("TileSet_xi4lh")
 [node name="bushes" type="TileMapLayer" parent="." unique_id=1452369421]
 tile_map_data = PackedByteArray("AAAPABQAAAAAAAAAAAApAA0AAAAAAAAAAAAUACIAAAAAAAAAAAALAAMAAAAAAAAAAABAAA4AAAAAAAAAAAADAB0AAQAAAAAAAAA7ABEAAQAAAAAAAAA4AB4AAQAAAAAAAAAQAAYAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_wmd7k")
+
+[node name="rocks" type="TileMapLayer" parent="." unique_id=224698254]
+tile_map_data = PackedByteArray("AAAyAAQAAQAAAAAAAAAEAA0AAQAAAAAAAAAcABcAAQAAAAAAAABFAAgAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_n1mkj")
