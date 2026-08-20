@@ -1413,10 +1413,12 @@ tile_map_data = PackedByteArray("AAAOAAIAAAAFAAAAAAAPAAIAAAAGAAAAAAAQAAIAAAAHAAA
 tile_set = SubResource("TileSet_454ae")
 
 [node name="trees" type="TileMapLayer" parent="." unique_id=693978339]
+z_index = 3
 tile_map_data = PackedByteArray("AAAQAA8AAAAAAAAAAAA5ABkAAAAAAAAAAAApAAgAAQAAAAAAAAAVAB0AAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_xi4lh")
 
 [node name="bushes" type="TileMapLayer" parent="." unique_id=1452369421]
+z_index = 3
 tile_map_data = PackedByteArray("AAAPABQAAAAAAAAAAAApAA0AAAAAAAAAAAAUACIAAAAAAAAAAAALAAMAAAAAAAAAAABAAA4AAAAAAAAAAAADAB0AAQAAAAAAAAA7ABEAAQAAAAAAAAA4AB4AAQAAAAAAAAAQAAYAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_wmd7k")
 
