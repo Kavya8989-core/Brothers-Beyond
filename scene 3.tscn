@@ -964,6 +964,7 @@ texture_region_size = Vector2i(64, 64)
 7:3/0/terrain = 1
 7:3/0/terrains_peering_bit/left_side = 1
 7:4/0 = 0
+7:4/0/z_index = -1
 7:4/0/terrain_set = 0
 7:4/0/terrain = 0
 7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.143429, -32, 32, -32, 32, 19.756584, -18.063164, 23.143425)
@@ -975,6 +976,7 @@ texture_region_size = Vector2i(64, 64)
 6:3/0/terrains_peering_bit/right_side = 1
 6:3/0/terrains_peering_bit/left_side = 1
 6:4/0 = 0
+6:4/0/z_index = -1
 6:4/0/terrain_set = 0
 6:4/0/terrain = 0
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.143429, -32, 32, -32, 32, 19.756584, -18.063164, 23.143425)
@@ -985,6 +987,7 @@ texture_region_size = Vector2i(64, 64)
 5:3/0/terrain = 1
 5:3/0/terrains_peering_bit/right_side = 1
 5:4/0 = 0
+5:4/0/z_index = -1
 5:4/0/terrain_set = 0
 5:4/0/terrain = 0
 5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.143429, -32, 32, -32, 32, 19.756584, -18.063164, 23.143425)
@@ -1413,12 +1416,15 @@ tile_map_data = PackedByteArray("AAAOAAIAAAAFAAAAAAAPAAIAAAAGAAAAAAAQAAIAAAAHAAA
 tile_set = SubResource("TileSet_454ae")
 
 [node name="trees" type="TileMapLayer" parent="." unique_id=693978339]
-z_index = 3
+z_index = 1
 tile_map_data = PackedByteArray("AAAQAA8AAAAAAAAAAAA5ABkAAAAAAAAAAAApAAgAAQAAAAAAAAAVAB0AAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_xi4lh")
 
+[node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
+position = Vector2(415, 92)
+
 [node name="bushes" type="TileMapLayer" parent="." unique_id=1452369421]
-z_index = 3
+z_index = 1
 tile_map_data = PackedByteArray("AAAPABQAAAAAAAAAAAApAA0AAAAAAAAAAAAUACIAAAAAAAAAAAALAAMAAAAAAAAAAABAAA4AAAAAAAAAAAADAB0AAQAAAAAAAAA7ABEAAQAAAAAAAAA4AB4AAQAAAAAAAAAQAAYAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_wmd7k")
 
@@ -1437,6 +1443,3 @@ tile_set = SubResource("TileSet_lrbqv")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2104009664]
 position = Vector2(1136, 404)
 metadata/_edit_group_ = true
-
-[node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
-position = Vector2(415, 92)
