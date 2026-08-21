@@ -1396,6 +1396,7 @@ texture = ExtResource("12_yvvj8")
 sources/1 = SubResource("TileSetAtlasSource_w0clj")
 
 [node name="Scene3" type="Node2D" unique_id=484648831]
+z_index = 1
 script = ExtResource("1_lo4rd")
 
 [node name="water" type="TileMapLayer" parent="." unique_id=188365194]
@@ -1420,13 +1421,15 @@ z_index = 1
 tile_map_data = PackedByteArray("AAAQAA8AAAAAAAAAAAA5ABkAAAAAAAAAAAApAAgAAQAAAAAAAAAVAB0AAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_xi4lh")
 
-[node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
-position = Vector2(415, 92)
-
 [node name="bushes" type="TileMapLayer" parent="." unique_id=1452369421]
-z_index = 1
-tile_map_data = PackedByteArray("AAAPABQAAAAAAAAAAAApAA0AAAAAAAAAAAAUACIAAAAAAAAAAAALAAMAAAAAAAAAAABAAA4AAAAAAAAAAAADAB0AAQAAAAAAAAA7ABEAAQAAAAAAAAA4AB4AAQAAAAAAAAAQAAYAAQAAAAAAAAA=")
+z_index = 2
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAALAAMAAAAAAAAAAABAAA4AAAAAAAAAAAADAB0AAQAAAAAAAAA7ABEAAQAAAAAAAAAQAAYAAQAAAAAAAAAPABUAAAAAAAAAAAAoAA4AAAAAAAAAAAA4AB8AAQAAAAAAAAAZACEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_wmd7k")
+
+[node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
+z_index = 2
+position = Vector2(415, 92)
 
 [node name="rocks" type="TileMapLayer" parent="." unique_id=224698254]
 tile_map_data = PackedByteArray("AAAyAAQAAQAAAAAAAAAEAA0AAQAAAAAAAAAcABcAAQAAAAAAAABFAAgAAQAAAAAAAAA=")
