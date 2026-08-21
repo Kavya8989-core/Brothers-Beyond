@@ -1429,7 +1429,7 @@ tile_set = SubResource("TileSet_wmd7k")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
 z_index = 2
-position = Vector2(415, 92)
+position = Vector2(393, 32)
 
 [node name="rocks" type="TileMapLayer" parent="." unique_id=224698254]
 tile_map_data = PackedByteArray("AAAyAAQAAQAAAAAAAAAEAA0AAQAAAAAAAAAcABcAAQAAAAAAAABFAAgAAQAAAAAAAAA=")
