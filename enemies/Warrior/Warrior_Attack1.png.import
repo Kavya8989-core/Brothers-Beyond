@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch7s2pp50fxpt"
-path="res://.godot/imported/Skeleton.png-9123c690c2c27dfcdb6ac6dfd00a74ff.ctex"
+uid="uid://pkqro85vqhmi"
+path="res://.godot/imported/Warrior_Attack1.png-a314a96cf693cd2e5889e7796497ea12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Enemies/Skeleton.png"
-dest_files=["res://.godot/imported/Skeleton.png-9123c690c2c27dfcdb6ac6dfd00a74ff.ctex"]
+source_file="res://enemies/Warrior/Warrior_Attack1.png"
+dest_files=["res://.godot/imported/Warrior_Attack1.png-a314a96cf693cd2e5889e7796497ea12.ctex"]
 
 [params]
 

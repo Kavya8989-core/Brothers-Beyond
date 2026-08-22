@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pkqro85vqhmi"
-path="res://.godot/imported/Warrior_Attack1.png-ceae2256f10832197de0676047799df3.ctex"
+uid="uid://cueduk0ygsqwf"
+path="res://.godot/imported/Warrior_Idle.png-8ef4c833eb8aa5e390b2f27ba1bdbc99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiny Swords (Free Pack)/Units/Black Units/Warrior/Warrior_Attack1.png"
-dest_files=["res://.godot/imported/Warrior_Attack1.png-ceae2256f10832197de0676047799df3.ctex"]
+source_file="res://enemies/Warrior/Warrior_Idle.png"
+dest_files=["res://.godot/imported/Warrior_Idle.png-8ef4c833eb8aa5e390b2f27ba1bdbc99.ctex"]
 
 [params]
 

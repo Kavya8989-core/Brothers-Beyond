@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daefe7xwd2ltw"
-path="res://.godot/imported/Warrior_Guard.png-e4f971ceb261f172a63e350fa07d0bb6.ctex"
+uid="uid://ch7s2pp50fxpt"
+path="res://.godot/imported/Skeleton.png-e4d96225cc3762ee089eaa3c66775b09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiny Swords (Free Pack)/Units/Black Units/Warrior/Warrior_Guard.png"
-dest_files=["res://.godot/imported/Warrior_Guard.png-e4f971ceb261f172a63e350fa07d0bb6.ctex"]
+source_file="res://Cute_Fantasy_Free/Enemies/Skeleton.png"
+dest_files=["res://.godot/imported/Skeleton.png-e4d96225cc3762ee089eaa3c66775b09.ctex"]
 
 [params]
 
