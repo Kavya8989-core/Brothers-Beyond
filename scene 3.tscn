@@ -1401,6 +1401,7 @@ size = Vector2(27, 61)
 
 [node name="Scene3" type="Node2D" unique_id=484648831]
 z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_lo4rd")
 
 [node name="water" type="TileMapLayer" parent="." unique_id=188365194]
