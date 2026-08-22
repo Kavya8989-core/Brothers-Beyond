@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 const walk_SPEED = 70.0
 const run_SPEED=200.0
 
@@ -10,7 +9,12 @@ var if_attacking :=false
 var _health : int = 100
 var _damage : int = 20
 func _ready() -> void:
-	print("RETURNING FROM HOUSE: ", GameManager.returning_from_house)
+	if GameManager.save_checkpoint == true:
+		await get_tree().process_frame
+		var spawn = get_tree().current_scene.get_node("SPAWN")
+		global_position = spawn.global_position
+		print("old position assigned")
+		GameManager.save_checkpoint = false
 
 	if get_tree().current_scene.scene_file_path == "res://main.tscn":
 		if GameManager.returning_from_house:

@@ -15,6 +15,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		GameManager.save_checkpoint = true
 		_is_in_range = true
 		label.show()
 

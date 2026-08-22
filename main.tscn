@@ -9685,7 +9685,7 @@ tile_set = SubResource("TileSet_knnpy")
 
 [node name="mc" parent="." unique_id=222422542 instance=ExtResource("16_2cqfq")]
 z_index = 2
-position = Vector2(26, 293)
+position = Vector2(69, 303)
 
 [node name="Camera2D" type="Camera2D" parent="mc" unique_id=560879704]
 y_sort_enabled = true
@@ -9726,13 +9726,16 @@ position = Vector2(802, 177)
 position = Vector2(839, 181)
 
 [node name="level promotion" type="Area2D" parent="." unique_id=1356218632]
-position = Vector2(1149, 258)
+position = Vector2(1146, 262)
 script = ExtResource("22_ryguw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level promotion" unique_id=2015791994]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_74c84")
+
+[node name="SPAWN" type="Marker2D" parent="." unique_id=670570936]
+position = Vector2(1087, 261)
 
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]
