@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="10_6o2x3"]
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="12_yvvj8"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="13_50gws"]
+[ext_resource type="Script" uid="uid://d6cniobdahqa" path="res://back_scene_1.gd" id="14_50gws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("1_leqt3")
@@ -1395,6 +1396,9 @@ texture = ExtResource("12_yvvj8")
 [sub_resource type="TileSet" id="TileSet_lrbqv"]
 sources/1 = SubResource("TileSetAtlasSource_w0clj")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74c84"]
+size = Vector2(27, 61)
+
 [node name="Scene3" type="Node2D" unique_id=484648831]
 z_index = 1
 script = ExtResource("1_lo4rd")
@@ -1429,7 +1433,7 @@ tile_set = SubResource("TileSet_wmd7k")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("13_50gws")]
 z_index = 2
-position = Vector2(393, 32)
+position = Vector2(90, 379)
 
 [node name="rocks" type="TileMapLayer" parent="." unique_id=224698254]
 tile_map_data = PackedByteArray("AAAyAAQAAQAAAAAAAAAEAA0AAQAAAAAAAAAcABcAAQAAAAAAAABFAAgAAQAAAAAAAAA=")
@@ -1443,6 +1447,13 @@ tile_set = SubResource("TileSet_43aha")
 tile_map_data = PackedByteArray("AABHABsAAQABAAMAAABIABsAAQACAAMAAABEABoAAQABAAIAAABFABoAAQACAAIAAABHABoAAQABAAIAAABIABoAAQACAAIAAABIABkAAQACAAEAAABHABkAAQABAAEAAABFABkAAQACAAEAAABEABkAAQABAAEAAABDABkAAQAAAAEAAABDABoAAQAAAAIAAABDABsAAQAAAAMAAABEABsAAQABAAMAAAA=")
 tile_set = SubResource("TileSet_lrbqv")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=2104009664]
-position = Vector2(1136, 404)
+[node name="Back_scene_1" type="Area2D" parent="." unique_id=705707739]
+position = Vector2(12, 390)
+script = ExtResource("14_50gws")
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Back_scene_1" unique_id=517711470]
+position = Vector2(3.5, 2.5)
+shape = SubResource("RectangleShape2D_74c84")
+
+[connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]
