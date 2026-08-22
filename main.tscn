@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="14_vivmo"]
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="16_2cqfq"]
-[ext_resource type="Script" uid="uid://7ek8t3g1msed" path="res://level_promotion.gd" id="22_ryguw"]
+[ext_resource type="Script" uid="uid://co3dt0b0gcv0j" path="res://level_promotion2.gd" id="22_ryguw"]
 [ext_resource type="PackedScene" uid="uid://cwoya5bjhpccg" path="res://resources/npc dialogue.tscn" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://dc1iosbjjplno" path="res://lev_2.gd" id="24_1u8w0"]
 
@@ -9603,6 +9603,9 @@ loop = true
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sdby"]
 size = Vector2(36, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74c84"]
+size = Vector2(20, 65)
+
 [node name="terrain" type="Node2D" unique_id=1486775509]
 y_sort_enabled = true
 script = ExtResource("1_getpj")
@@ -9722,10 +9725,14 @@ position = Vector2(802, 177)
 [node name="FoxSpawnPoint" type="Marker2D" parent="." unique_id=329851943]
 position = Vector2(839, 181)
 
-[node name="level promotion" type="Area2D" parent="." unique_id=1821011750]
-position = Vector2(1142, 251)
+[node name="level promotion" type="Area2D" parent="." unique_id=1356218632]
+position = Vector2(1149, 258)
 script = ExtResource("22_ryguw")
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level promotion" unique_id=2015791994]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_74c84")
 
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]
