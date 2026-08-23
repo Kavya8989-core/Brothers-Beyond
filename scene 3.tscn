@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="12_yvvj8"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="13_50gws"]
 [ext_resource type="Script" uid="uid://d6cniobdahqa" path="res://back_scene_1.gd" id="14_50gws"]
+[ext_resource type="PackedScene" uid="uid://beknhv54vjw7o" path="res://Cute_Fantasy_Free/warrior enemies.tscn" id="15_70sll"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("1_leqt3")
@@ -1457,5 +1458,9 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Back_scene_1" unique_id=517711470]
 position = Vector2(3.5, 2.5)
 shape = SubResource("RectangleShape2D_74c84")
+
+[node name="WarriorEnemies" parent="." unique_id=87880742 instance=ExtResource("15_70sll")]
+position = Vector2(393, 239)
+scale = Vector2(0.7, 0.7)
 
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]

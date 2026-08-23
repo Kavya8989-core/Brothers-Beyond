@@ -107,3 +107,9 @@ func play_animations(prefix: String, dir: Vector2) -> void:
 	elif dir.y > 0:
 		animated_sprite_2d.play(prefix + " down")
 		
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if Input.is_action_just_pressed("attack"):
+		GameManager.mc_attacks = true
+		print("attacks")

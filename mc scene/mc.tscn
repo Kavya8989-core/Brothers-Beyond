@@ -769,6 +769,9 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2cqfq"]
 height = 38.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_74c84"]
+radius = 40.4475
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=222422542 groups=["player"]]
 script = ExtResource("1_gjw6m")
 
@@ -781,3 +784,11 @@ animation = &"move_hit down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877303242]
 position = Vector2(1, 8)
 shape = SubResource("CapsuleShape2D_2cqfq")
+
+[node name="attack_area" type="Area2D" parent="." unique_id=547699999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=250344843]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_74c84")
+
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
