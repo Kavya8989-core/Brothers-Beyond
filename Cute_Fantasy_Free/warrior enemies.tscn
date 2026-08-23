@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dv6ygq4t4j4xr" path="res://Cute_Fantasy_Free/warrior_enemies.gd" id="1_bmxbn"]
 [ext_resource type="Texture2D" uid="uid://daefe7xwd2ltw" path="res://enemies/Warrior/Warrior_Guard.png" id="2_bmxbn"]
 [ext_resource type="Texture2D" uid="uid://cueduk0ygsqwf" path="res://enemies/Warrior/Warrior_Idle.png" id="3_b3odf"]
+[ext_resource type="Texture2D" uid="uid://c6b7ye64dp2f" path="res://Tiny Swords (Free Pack)/Particle FX/Dust_01.png" id="4_b3odf"]
 [ext_resource type="Texture2D" uid="uid://c77osbk3ft85o" path="res://enemies/Warrior/Warrior_Run.png" id="4_d1wl8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwtk4"]
@@ -45,6 +46,34 @@ region = Rect2(768, 0, 192, 192)
 [sub_resource type="AtlasTexture" id="AtlasTexture_78id8"]
 atlas = ExtResource("2_bmxbn")
 region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1wl8"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8c4o"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvvlx"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq5o1"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc3ri"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs3kj"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ug7v"]
+atlas = ExtResource("4_b3odf")
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q3ud"]
 atlas = ExtResource("3_b3odf")
@@ -146,6 +175,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_d1wl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8c4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvvlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq5o1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc3ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs3kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ug7v")
+}],
+"loop": 0,
+"name": &"death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8q3ud")
 }, {
 "duration": 1.0,
@@ -205,7 +260,9 @@ script = ExtResource("1_bmxbn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247630069]
 sprite_frames = SubResource("SpriteFrames_454ae")
-animation = &"run"
+animation = &"death"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715568997]
 position = Vector2(5, -11)
