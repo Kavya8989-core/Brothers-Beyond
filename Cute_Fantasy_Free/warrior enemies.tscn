@@ -259,7 +259,7 @@ size = Vector2(62, 50)
 radius = 191.3165
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_454ae"]
-radius = 87.05171
+radius = 51.088158
 
 [node name="WarriorEnemies" type="CharacterBody2D" unique_id=87880742 groups=["enemy"]]
 script = ExtResource("1_bmxbn")
@@ -267,6 +267,7 @@ script = ExtResource("1_bmxbn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247630069]
 sprite_frames = SubResource("SpriteFrames_454ae")
 animation = &"idle"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715568997]
 position = Vector2(5, -11)

@@ -22,13 +22,17 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if is_mc_in_range == true:
-		var direction = global_position.direction_to(mc.global_position)
-		velocity = speed*direction
-		move_and_slide()
-		if is_in_attack_range == true:
-			print("mc attacked")
-			animated_sprite.play("attack")
-		
+		if health > 0:
+			if is_in_attack_range == true:
+				velocity = Vector2.ZERO
+				animated_sprite.play("attack")
+			else:
+				var direction = global_position.direction_to(mc.global_position)
+				velocity = speed*direction
+				animated_sprite.play("run")
+				move_and_slide()
+		else:
+			pass
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
