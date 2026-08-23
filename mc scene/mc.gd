@@ -30,6 +30,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+
 	if enemy_entered == true and Input.is_action_just_pressed("attack"):
 		print("attacked")
 		GameManager.mc_attacks = true
@@ -61,6 +62,11 @@ func _physics_process(_delta: float) -> void:
 		attack()
 
 	move_and_slide()
+	if GameManager.enemy_attacks == true :
+		if _health > 0 :
+			_health -= 10
+			print(_health)
+			animated_sprite_2d.play("hurt " + direction)
 	
 func face_target(target: Node2D):
 	var direction = target.global_position - global_position
@@ -99,11 +105,6 @@ func process_animations() -> void:
 				
 	else:
 		play_animations("idle", check_direction)
-	if GameManager.enemy_attacks == true :
-		if _health > 0 :
-			_health -= 10
-			print(_health)
-			animated_sprite_2d.play("hurt right")
 
 
 func play_animations(prefix: String, dir: Vector2) -> void:
