@@ -260,9 +260,7 @@ script = ExtResource("1_bmxbn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247630069]
 sprite_frames = SubResource("SpriteFrames_454ae")
-animation = &"death"
-frame = 6
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715568997]
 position = Vector2(5, -11)
