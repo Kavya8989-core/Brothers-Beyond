@@ -6,3 +6,4 @@ var fox_coming_out : bool = false
 var fox_can_follow : bool = false
 var save_checkpoint : bool = false
 var mc_attacks : bool = false
+var enemy_attacks : bool = false

@@ -99,6 +99,11 @@ func process_animations() -> void:
 				
 	else:
 		play_animations("idle", check_direction)
+	if GameManager.enemy_attacks == true :
+		if _health > 0 :
+			_health -= 10
+			print(_health)
+			animated_sprite_2d.play("hurt right")
 
 
 func play_animations(prefix: String, dir: Vector2) -> void:

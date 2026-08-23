@@ -266,7 +266,9 @@ script = ExtResource("1_bmxbn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247630069]
 sprite_frames = SubResource("SpriteFrames_454ae")
-animation = &"idle"
+animation = &"attack"
+frame = 3
+frame_progress = 1.0
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715568997]

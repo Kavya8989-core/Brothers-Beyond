@@ -2,9 +2,30 @@
 
 [ext_resource type="Script" uid="uid://b3i3j1h4y8nx" path="res://mc scene/mc.gd" id="1_gjw6m"]
 [ext_resource type="Texture2D" uid="uid://y15rjneu8iuo" path="res://With_shadow/Swordsman_lvl3_Walk_with_shadow.png" id="2_8xjm7"]
+[ext_resource type="Texture2D" uid="uid://byxotrm2ylfxj" path="res://With_shadow/Swordsman_lvl3_Hurt_with_shadow.png" id="2_r4mxp"]
 [ext_resource type="Texture2D" uid="uid://x8t64hsoio8q" path="res://With_shadow/Swordsman_lvl3_Idle_with_shadow.png" id="2_t4lfy"]
 [ext_resource type="Texture2D" uid="uid://dq83d1toa0ij2" path="res://With_shadow/Swordsman_lvl3_Walk_Attack_with_shadow.png" id="4_5p7q6"]
 [ext_resource type="Texture2D" uid="uid://6c07dsb0pmti" path="res://With_shadow/Swordsman_lvl3_Run_with_shadow.png" id="4_t4lfy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uvvp"]
+atlas = ExtResource("2_r4mxp")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xuiw"]
+atlas = ExtResource("2_r4mxp")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3egjr"]
+atlas = ExtResource("2_r4mxp")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhaks"]
+atlas = ExtResource("2_r4mxp")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fle2"]
+atlas = ExtResource("2_r4mxp")
+region = Rect2(256, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t4lfy"]
 atlas = ExtResource("2_t4lfy")
@@ -394,6 +415,26 @@ region = Rect2(448, 192, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4uvvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xuiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3egjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhaks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fle2")
+}],
+"loop": 0,
+"name": &"hurt right",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_t4lfy")
 }, {
 "duration": 1.0,
@@ -779,7 +820,9 @@ script = ExtResource("1_gjw6m")
 position = Vector2(2, 7)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1sdby")
-animation = &"move_hit down"
+animation = &"hurt right"
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877303242]
 position = Vector2(1, 8)

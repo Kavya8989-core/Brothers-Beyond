@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 			if is_in_attack_range == true:
 				velocity = Vector2.ZERO
 				animated_sprite.play("attack")
+				GameManager.enemy_attacks = true
 			else:
 				var direction = global_position.direction_to(mc.global_position)
 				velocity = speed*direction
