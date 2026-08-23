@@ -197,17 +197,16 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_74c84"]
-radius = 18.0
-height = 52.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70sll"]
+size = Vector2(62, 50)
 
-[node name="WarriorEnemies" type="CharacterBody2D" unique_id=87880742]
+[node name="WarriorEnemies" type="CharacterBody2D" unique_id=87880742 groups=["enemy"]]
 script = ExtResource("1_bmxbn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=247630069]
 sprite_frames = SubResource("SpriteFrames_454ae")
 animation = &"run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=715568997]
-position = Vector2(-1, 4)
-shape = SubResource("CapsuleShape2D_74c84")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715568997]
+position = Vector2(5, -11)
+shape = SubResource("RectangleShape2D_70sll")

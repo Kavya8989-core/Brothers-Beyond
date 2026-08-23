@@ -30,6 +30,10 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if enemy_entered == true and Input.is_action_just_pressed("attack"):
+		print("attacked")
+		GameManager.mc_attacks = true
+		enemy.takes_dmg()
 
 	if is_in_dialogue:
 		velocity = Vector2.ZERO
@@ -107,9 +111,16 @@ func play_animations(prefix: String, dir: Vector2) -> void:
 	elif dir.y > 0:
 		animated_sprite_2d.play(prefix + " down")
 		
-
-
+var enemy  : Node2D
+var enemy_entered : bool = false
 func _on_attack_area_body_entered(body: Node2D) -> void:
-	if Input.is_action_just_pressed("attack"):
-		GameManager.mc_attacks = true
-		print("attacks")
+	if body.is_in_group("enemy"):
+		enemy_entered = true
+		print("enemy eneterd")
+		enemy = body
+
+func _on_attack_area_body_exited(body: Node2D) -> void:
+	if body == enemy:
+		enemy_entered = false
+		print("enemy exited")
+		enemy = null
