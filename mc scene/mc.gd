@@ -8,6 +8,7 @@ var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var _health : int = 100
 var _damage : int = 20
+var can_attack : bool = true
 func _ready() -> void:
 	if GameManager.save_checkpoint == true:
 		await get_tree().process_frame
@@ -63,11 +64,14 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 	if GameManager.enemy_attacks == true :
-		if _health > 0 :
+		if _health > 0 and can_attack == true:
+			can_attack = false
 			_health -= 10
 			print(_health)
-			animated_sprite_2d.play("hurt " + direction)
-	
+			animated_sprite_2d.play("hurt ")
+			
+			await get_tree().create_timer(0.7).timeout
+			can_attack = true
 func face_target(target: Node2D):
 	var direction = target.global_position - global_position
 
@@ -87,13 +91,6 @@ func attack() -> void:
 	play_animations("move_hit",check_direction)
 	await animated_sprite_2d.animation_finished
 	if_attacking = false
-
-
-
-
-
-	
-
 
 
 func process_animations() -> void:
