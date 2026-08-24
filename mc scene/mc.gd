@@ -71,7 +71,7 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 	if GameManager.enemy_attacks == true:
-		if _health > 0 and can_attack:
+		if _health > 0 and can_attack and GameManager.enemy_blocked == false:
 			can_attack = false
 			_health -= 10
 
@@ -103,6 +103,8 @@ func _physics_process(_delta: float) -> void:
 
 			is_hurt = false
 			can_attack = true
+		else:
+			pass
 func face_target(target: Node2D):
 	var direction = target.global_position - global_position
 

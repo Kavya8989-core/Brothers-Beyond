@@ -8,10 +8,9 @@ var is_mc_in_range : bool = false
 var is_in_attack_range : bool = false
 var attack_ready := true
 var count_attack : int = 0
-var enemy_blocked : bool = false
 
 func takes_dmg() -> void:
-	if GameManager.mc_attacks == true:
+	if GameManager.mc_attacks == true and GameManager.enemy_blocked == false:
 		health -= 20
 		GameManager.mc_attacks = false
 		if health <= 0 :
@@ -31,10 +30,16 @@ func _physics_process(delta: float) -> void:
 
 				if attack_ready:
 					attack_ready = false
+					GameManager.enemy_blocked = false
 					animated_sprite.play("attack")
 					count_attack +=1
 					print("attack_count:",count_attack)
 					GameManager.enemy_attacks = true
+					if count_attack == 3 :
+						count_attack = 0
+						animated_sprite.stop()
+						animated_sprite.play("block")
+						GameManager.enemy_blocked = true
 					
 
 					await get_tree().create_timer(0.1).timeout
