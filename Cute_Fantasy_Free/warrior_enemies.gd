@@ -21,12 +21,14 @@ func _ready() -> void:
 	animated_sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
-	if is_mc_in_range == true:
+	if is_mc_in_range:
 		if health > 0:
-			if is_in_attack_range == true:
+			if is_in_attack_range:
 				velocity = Vector2.ZERO
 				animated_sprite.play("attack")
 				GameManager.enemy_attacks = true
+				await get_tree().create_timer(0.1).timeout
+				GameManager.enemy_attacks = false
 			else:
 				var direction = global_position.direction_to(mc.global_position)
 				velocity = speed*direction
