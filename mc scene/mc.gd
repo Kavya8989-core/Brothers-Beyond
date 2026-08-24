@@ -72,6 +72,8 @@ func _physics_process(_delta: float) -> void:
 			
 			await get_tree().create_timer(0.7).timeout
 			can_attack = true
+		if _health == 0 :
+			animated_sprite_2d.play("death")
 func face_target(target: Node2D):
 	var direction = target.global_position - global_position
 
