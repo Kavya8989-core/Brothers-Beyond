@@ -8,3 +8,4 @@ var save_checkpoint : bool = false
 var mc_attacks : bool = false
 var enemy_attacks : bool = false
 var enemy_blocked : bool = false
+var is_mc_died : bool = false

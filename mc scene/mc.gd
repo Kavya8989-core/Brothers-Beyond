@@ -6,7 +6,7 @@ var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-var _health : int = 100
+var _health : int = 30
 var _damage : int = 20
 var can_attack : bool = true
 var is_hurt := false
@@ -79,6 +79,7 @@ func _physics_process(_delta: float) -> void:
 				is_dead = true
 				velocity = Vector2.ZERO
 				animated_sprite_2d.play("death")
+				GameManager.is_mc_died = true
 				return
 
 			is_hurt = true

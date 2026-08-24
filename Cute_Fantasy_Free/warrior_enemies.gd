@@ -27,13 +27,16 @@ func _physics_process(delta: float) -> void:
 		if health > 0:
 			if is_in_attack_range:
 				velocity = Vector2.ZERO
+				if GameManager.is_mc_died == true:
+						print("mc died")
+						animated_sprite.stop()
+						animated_sprite.play("idle")
 
 				if attack_ready:
 					attack_ready = false
 					GameManager.enemy_blocked = false
 					animated_sprite.play("attack")
 					count_attack +=1
-					print("attack_count:",count_attack)
 					GameManager.enemy_attacks = true
 					if count_attack == 3 :
 						count_attack = 0
