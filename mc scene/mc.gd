@@ -9,6 +9,8 @@ var if_attacking :=false
 var _health : int = 100
 var _damage : int = 20
 var can_attack : bool = true
+var is_hurt := false
+var is_dead := false
 func _ready() -> void:
 	if GameManager.save_checkpoint == true:
 		await get_tree().process_frame
@@ -31,6 +33,11 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	if is_dead:
+		return
+
+	if is_hurt:
+		return
 
 	if enemy_entered == true and Input.is_action_just_pressed("attack"):
 		print("attacked")
@@ -63,28 +70,39 @@ func _physics_process(_delta: float) -> void:
 		attack()
 
 	move_and_slide()
-	if GameManager.enemy_attacks == true :
-		if _health > 0 and can_attack == true:
+	if GameManager.enemy_attacks == true:
+		if _health > 0 and can_attack:
 			can_attack = false
 			_health -= 10
-			print(_health)
-			var direction_name : String
+
+			if _health <= 0:
+				is_dead = true
+				velocity = Vector2.ZERO
+				animated_sprite_2d.play("death")
+				return
+
+			is_hurt = true
+			velocity = Vector2.ZERO
+
+			var direction_name: String
+
 			if abs(direction.x) > abs(direction.y):
 				if direction.x > 0:
 					direction_name = "right"
-				else :
+				else:
 					direction_name = "left"
-			else :
+			else:
 				if direction.y > 0:
 					direction_name = "down"
-				else :
+				else:
 					direction_name = "up"
-			animated_sprite_2d.play("hurt" + direction_name)
-			
-			await get_tree().create_timer(0.6).timeout
+
+			animated_sprite_2d.play("hurt " + direction_name)
+
+			await animated_sprite_2d.animation_finished
+
+			is_hurt = false
 			can_attack = true
-		if _health == 0 :
-			animated_sprite_2d.play("death")
 func face_target(target: Node2D):
 	var direction = target.global_position - global_position
 
