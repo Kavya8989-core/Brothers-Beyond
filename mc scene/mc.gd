@@ -68,9 +68,20 @@ func _physics_process(_delta: float) -> void:
 			can_attack = false
 			_health -= 10
 			print(_health)
-			animated_sprite_2d.play("hurt ")
+			var direction_name : String
+			if abs(direction.x) > abs(direction.y):
+				if direction.x > 0:
+					direction_name = "right"
+				else :
+					direction_name = "left"
+			else :
+				if direction.y > 0:
+					direction_name = "down"
+				else :
+					direction_name = "up"
+			animated_sprite_2d.play("hurt" + direction_name)
 			
-			await get_tree().create_timer(0.7).timeout
+			await get_tree().create_timer(0.6).timeout
 			can_attack = true
 		if _health == 0 :
 			animated_sprite_2d.play("death")
