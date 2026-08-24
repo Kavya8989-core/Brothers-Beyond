@@ -24,23 +24,24 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_mc_in_range:
 		if health > 0:
-			if is_in_attack_range and attack_ready:
-				attack_ready = false
+			if is_in_attack_range:
 				velocity = Vector2.ZERO
-				animated_sprite.play("attack")
-				GameManager.enemy_attacks = true
 
-				await get_tree().create_timer(0.1).timeout
-				GameManager.enemy_attacks = false
+				if attack_ready:
+					attack_ready = false
+					animated_sprite.play("attack")
+					GameManager.enemy_attacks = true
 
-				await get_tree().create_timer(1.0).timeout
-				attack_ready = true
+					await get_tree().create_timer(0.1).timeout
+					GameManager.enemy_attacks = false
+
+					await get_tree().create_timer(1.0).timeout
+					attack_ready = true
+			else:
 				var direction = global_position.direction_to(mc.global_position)
-				velocity = speed*direction
+				velocity = speed * direction
 				animated_sprite.play("run")
 				move_and_slide()
-		else:
-			pass
 
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
