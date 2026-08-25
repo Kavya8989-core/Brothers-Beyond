@@ -1467,7 +1467,15 @@ position = Vector2(3.5, 2.5)
 shape = SubResource("RectangleShape2D_74c84")
 
 [node name="WarriorEnemies" parent="." unique_id=87880742 instance=ExtResource("15_70sll")]
-position = Vector2(393, 239)
+position = Vector2(388, 244)
+scale = Vector2(0.7, 0.7)
+
+[node name="WarriorEnemies2" parent="." unique_id=940681106 instance=ExtResource("15_70sll")]
+position = Vector2(608, 85)
+scale = Vector2(0.7, 0.7)
+
+[node name="WarriorEnemies3" parent="." unique_id=314118959 instance=ExtResource("15_70sll")]
+position = Vector2(777, 319)
 scale = Vector2(0.7, 0.7)
 
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]
