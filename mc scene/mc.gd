@@ -41,7 +41,7 @@ func _physics_process(_delta: float) -> void:
 	if is_hurt:
 		return
 
-	if enemy_entered == true and Input.is_action_just_pressed("attack"):
+	if enemy_entered and Input.is_action_just_pressed("attack") and animated_sprite_2d.animation in ["move_hit right", "move_hit down", "move_hit left", "move_hit up"]:
 		print("attacked")
 		GameManager.mc_attacks = true
 		enemy.takes_dmg()
