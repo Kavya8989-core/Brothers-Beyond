@@ -19,8 +19,9 @@ func takes_dmg() -> void:
 			health = 0
 			$CollisionShape2D.set_deferred("disabled",true)
 			animated_sprite.play("death")
-			await get_tree().create_timer(0.1).timeout
-			print("death")
+			await animated_sprite.animation_finished
+			coin.show()
+			coin.play("coin")
 	print(health)
 
 func _ready() -> void:
