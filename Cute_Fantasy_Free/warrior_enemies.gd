@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+@onready var health_bar = $health_bar
 var speed : int = 70
 var health : int = 50
 var mc : Node2D
@@ -8,6 +8,7 @@ var is_mc_in_range : bool = false
 var is_in_attack_range : bool = false
 var attack_ready := true
 var count_attack : int = 0
+
 
 func takes_dmg() -> void:
 	if GameManager.mc_attacks == true and GameManager.enemy_blocked == false:
@@ -20,9 +21,13 @@ func takes_dmg() -> void:
 	print(health)
 
 func _ready() -> void:
+	health_bar.value = health
 	animated_sprite.play("idle")
 
 func _physics_process(delta: float) -> void:
+	health_bar.value = health
+	if health == 0:
+		health_bar.hide()
 	if is_mc_in_range:
 		if health > 0:
 			if is_in_attack_range:

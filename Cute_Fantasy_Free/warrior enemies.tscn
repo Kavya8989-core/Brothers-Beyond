@@ -261,6 +261,12 @@ radius = 191.3165
 [sub_resource type="CircleShape2D" id="CircleShape2D_454ae"]
 radius = 51.088158
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74c84"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnp0m"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="WarriorEnemies" type="CharacterBody2D" unique_id=87880742 groups=["enemy"]]
 script = ExtResource("1_bmxbn")
 
@@ -286,6 +292,17 @@ position = Vector2(5, -11)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack range" unique_id=2027641017]
 shape = SubResource("CircleShape2D_454ae")
+
+[node name="health_bar" type="ProgressBar" parent="." unique_id=2011432609]
+offset_left = -67.0
+offset_top = -83.0
+offset_right = 71.0
+offset_bottom = -69.0
+theme_override_styles/background = SubResource("StyleBoxFlat_74c84")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xnp0m")
+max_value = 50.0
+value = 50.0
+show_percentage = false
 
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection area" to="." method="_on_detection_area_body_exited"]
