@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://d6cniobdahqa" path="res://back_scene_1.gd" id="14_50gws"]
 [ext_resource type="PackedScene" uid="uid://beknhv54vjw7o" path="res://Cute_Fantasy_Free/warrior enemies.tscn" id="15_70sll"]
 [ext_resource type="PackedScene" uid="uid://h6576fcfqrth" path="res://With_shadow/fox.tscn" id="16_w0clj"]
+[ext_resource type="AudioStream" uid="uid://l3i4n3761kcp" path="res://audio/The Most Powerful Chicken.mp3" id="17_fxr6j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("1_leqt3")
@@ -1481,5 +1482,10 @@ scale = Vector2(0.7, 0.7)
 
 [node name="Fox" parent="." unique_id=2031372852 instance=ExtResource("16_w0clj")]
 position = Vector2(90, 320)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459048244]
+stream = ExtResource("17_fxr6j")
+volume_db = 11.143
+autoplay = true
 
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]

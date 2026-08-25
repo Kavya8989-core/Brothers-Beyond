@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l3i4n3761kcp"
+path="res://.godot/imported/The Most Powerful Chicken.mp3-b2f171991a2d09b5245b108b0c5fc3d3.mp3str"
+
+[deps]
+
+source_file="res://audio/The Most Powerful Chicken.mp3"
+dest_files=["res://.godot/imported/The Most Powerful Chicken.mp3-b2f171991a2d09b5245b108b0c5fc3d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

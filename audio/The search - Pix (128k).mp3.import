@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gl3jy1mehmlu"
+path="res://.godot/imported/The search - Pix (128k).mp3-60568e6e3f760042aae8de3788fbd409.mp3str"
+
+[deps]
+
+source_file="res://audio/The search - Pix (128k).mp3"
+dest_files=["res://.godot/imported/The search - Pix (128k).mp3-60568e6e3f760042aae8de3788fbd409.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
