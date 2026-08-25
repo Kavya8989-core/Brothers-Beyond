@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_bar = $health_bar
+@onready var coin = $coin
 var speed : int = 70
 var health : int = 50
 var mc : Node2D
@@ -18,6 +19,8 @@ func takes_dmg() -> void:
 			health = 0
 			$CollisionShape2D.set_deferred("disabled",true)
 			animated_sprite.play("death")
+			await get_tree().create_timer(0.1).timeout
+			print("death")
 	print(health)
 
 func _ready() -> void:
