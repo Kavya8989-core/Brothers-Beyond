@@ -1,17 +1,18 @@
 extends CharacterBody2D
 const walk_SPEED = 70.0
 const run_SPEED=200.0
-
+@onready var health_bar = $HealthBar
 var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-var _health : int = 30
+var _health : int = 100
 var _damage : int = 20
 var can_attack : bool = true
 var is_hurt := false
 var is_dead := false
 func _ready() -> void:
+	health_bar.value = _health
 	if GameManager.save_checkpoint == true:
 		await get_tree().process_frame
 		var spawn = get_tree().current_scene.get_node("SPAWN")
@@ -33,6 +34,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	health_bar.value = _health
 	if is_dead:
 		return
 

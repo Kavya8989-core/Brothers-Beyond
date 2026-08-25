@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 			if is_in_attack_range:
 				velocity = Vector2.ZERO
 				if GameManager.is_mc_died == true:
-						print("mc died")
 						animated_sprite.stop()
 						animated_sprite.play("idle")
 

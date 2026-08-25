@@ -908,6 +908,12 @@ height = 38.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_74c84"]
 radius = 33.13608
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnp0m"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xi4lh"]
+bg_color = Color(0.75485206, 0, 0.24539277, 1)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=222422542 groups=["player"]]
 script = ExtResource("1_gjw6m")
 
@@ -926,8 +932,18 @@ shape = SubResource("CapsuleShape2D_2cqfq")
 [node name="attack_area" type="Area2D" parent="." unique_id=547699999]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=250344843]
-position = Vector2(0, 10)
+position = Vector2(4, 7)
 shape = SubResource("CircleShape2D_74c84")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1346069196]
+offset_left = -65.0
+offset_top = -39.0
+offset_right = 65.0
+offset_bottom = -31.0
+theme_override_styles/background = SubResource("StyleBoxFlat_xnp0m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xi4lh")
+value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
