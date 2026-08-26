@@ -10,5 +10,3 @@ func _input(event: InputEvent) -> void:
 		inventory.open()
 	elif event.is_action_pressed("close"):
 		inventory.close()
-		print("close")
-	

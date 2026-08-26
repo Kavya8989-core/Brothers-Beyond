@@ -9,3 +9,11 @@ func _ready() -> void:
 		fox.global_position = $FoxSpawnPoint.global_position
 
 		GameManager.fox_coming_out = false
+
+
+func _on_inventory_gui_closed() -> void:
+	get_tree().paused = false
+
+
+func _on_inventory_gui_opened() -> void:
+	get_tree().paused = true

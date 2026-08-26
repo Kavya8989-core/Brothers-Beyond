@@ -9740,6 +9740,7 @@ shape = SubResource("RectangleShape2D_74c84")
 position = Vector2(1087, 261)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=173193527]
+process_mode = 3
 script = ExtResource("23_0odxb")
 
 [node name="inventory gui" parent="CanvasLayer" unique_id=943171249 instance=ExtResource("23_1u8w0")]
@@ -9756,3 +9757,5 @@ scale = Vector2(5, 5)
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]
 [connection signal="body_entered" from="level promotion" to="level promotion" method="_on_body_entered"]
+[connection signal="closed" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_closed"]
+[connection signal="opened" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_opened"]
