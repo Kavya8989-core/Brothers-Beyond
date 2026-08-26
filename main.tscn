@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c53xppjlpy2nx" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://65ahstemjkv8" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Wood Resource/Wood Resource.png" id="7_w48qg"]
 [ext_resource type="Texture2D" uid="uid://cqvaiaxgkip17" path="res://resources/download__11_-removebg-preview.png" id="10_yaehf"]
-[ext_resource type="PackedScene" uid="uid://6apoo0om5all" path="res://npc scene.tscn" id="11_getpj"]
+[ext_resource type="PackedScene" uid="uid://6apoo0om5all" path="res://scenes/npc scene.tscn" id="11_getpj"]
 [ext_resource type="Texture2D" uid="uid://cbwujg04pjmuv" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="11_vivmo"]
 [ext_resource type="PackedScene" uid="uid://b3e3f63ewsblm" path="res://interaction/interaction manager.tscn" id="12_ryguw"]
 [ext_resource type="Texture2D" uid="uid://555n6bq6ebxv" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/Sheep_Idle.png" id="13_2cqfq"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="16_2cqfq"]
 [ext_resource type="Script" uid="uid://co3dt0b0gcv0j" path="res://level_promotion2.gd" id="22_ryguw"]
+[ext_resource type="PackedScene" uid="uid://whwfp8opdkvp" path="res://scenes/inventory_gui.tscn" id="23_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://cwoya5bjhpccg" path="res://resources/npc dialogue.tscn" id="23_d13ii"]
 [ext_resource type="Script" uid="uid://dc1iosbjjplno" path="res://lev_2.gd" id="24_1u8w0"]
 
@@ -9736,6 +9737,10 @@ shape = SubResource("RectangleShape2D_74c84")
 
 [node name="SPAWN" type="Marker2D" parent="." unique_id=670570936]
 position = Vector2(1087, 261)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=173193527]
+
+[node name="inventory gui" parent="CanvasLayer" unique_id=943171249 instance=ExtResource("23_1u8w0")]
 
 [connection signal="body_entered" from="lev 2" to="lev 2" method="_on_body_entered"]
 [connection signal="body_exited" from="lev 2" to="lev 2" method="_on_body_exited"]
