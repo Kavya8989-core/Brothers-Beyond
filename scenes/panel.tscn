@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://ct4kurvfesspy"]
 
 [ext_resource type="Texture2D" uid="uid://cmo34sqjc080r" path="res://inventory/inventorySlot.png" id="1_8e8e8"]
+[ext_resource type="Script" uid="uid://cmw61tltbrrxw" path="res://scenes/panel.gd" id="1_ixbsq"]
 
 [node name="Panel" type="Panel" unique_id=1659928034]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(20, 20)
 offset_right = 20.0
 offset_bottom = 20.0
+script = ExtResource("1_ixbsq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954092253]
+[node name="background" type="Sprite2D" parent="." unique_id=1954092253]
 texture = ExtResource("1_8e8e8")
 centered = false
 vframes = 2
+
+[node name="item" type="Sprite2D" parent="." unique_id=262736087]
