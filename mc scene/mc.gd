@@ -2,6 +2,7 @@ extends CharacterBody2D
 const walk_SPEED = 70.0
 const run_SPEED=200.0
 @onready var health_bar = $HealthBar
+@export var inventory : Iventory
 var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false

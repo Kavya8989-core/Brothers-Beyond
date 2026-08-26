@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://rmnc2awl8xld"]
+
+[ext_resource type="Script" uid="uid://btjqp72cplwjm" path="res://inventory/inventory items.gd" id="1_tgtph"]
+[ext_resource type="Texture2D" uid="uid://wgs4nxy26r77" path="res://inventory/Pixel_art_sword_isolated_object___Premium_Vector-removebg-preview.png" id="2_jqwmy"]
+
+[resource]
+script = ExtResource("1_tgtph")
+name = "sword"
+texture = ExtResource("2_jqwmy")
+metadata/_custom_type_script = "uid://btjqp72cplwjm"

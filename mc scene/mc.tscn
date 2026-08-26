@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bfomgb384jl75" path="res://With_shadow/Swordsman_lvl3_Death_with_shadow.png" id="2_5obeu"]
 [ext_resource type="Texture2D" uid="uid://y15rjneu8iuo" path="res://With_shadow/Swordsman_lvl3_Walk_with_shadow.png" id="2_8xjm7"]
 [ext_resource type="Texture2D" uid="uid://byxotrm2ylfxj" path="res://With_shadow/Swordsman_lvl3_Hurt_with_shadow.png" id="2_r4mxp"]
+[ext_resource type="Resource" uid="uid://b30fblormxekf" path="res://inventory/player_inventory_resource.tres" id="2_sa80v"]
 [ext_resource type="Texture2D" uid="uid://x8t64hsoio8q" path="res://With_shadow/Swordsman_lvl3_Idle_with_shadow.png" id="2_t4lfy"]
 [ext_resource type="Texture2D" uid="uid://dq83d1toa0ij2" path="res://With_shadow/Swordsman_lvl3_Walk_Attack_with_shadow.png" id="4_5p7q6"]
 [ext_resource type="Texture2D" uid="uid://6c07dsb0pmti" path="res://With_shadow/Swordsman_lvl3_Run_with_shadow.png" id="4_t4lfy"]
@@ -916,6 +917,7 @@ bg_color = Color(0.75485206, 0, 0.24539277, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=222422542 groups=["player"]]
 script = ExtResource("1_gjw6m")
+inventory = ExtResource("2_sa80v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1548933293]
 position = Vector2(2, 7)
