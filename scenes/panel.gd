@@ -12,4 +12,4 @@ func update(item : InventoryItem):
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		itemSprite.texture = item.texture
-		itemSprite.scale = Vector2(0.25, 0.25)
+		itemSprite.scale = Vector2(0.05, 0.05)

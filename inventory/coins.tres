@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://bou4l8aa4r5y8"]
+
+[ext_resource type="Script" uid="uid://btjqp72cplwjm" path="res://inventory/inventory items.gd" id="1_5qlxo"]
+[ext_resource type="Texture2D" uid="uid://y4entvkwrkl2" path="res://inventory/Pixel_art_style_isolated_vector_coin_for_retro_game__Shiner_golden_coin__pixel_Illustration__141973736-removebg-preview-Photoroom.png" id="2_745ko"]
+
+[resource]
+script = ExtResource("1_5qlxo")
+name = "coin"
+texture = ExtResource("2_745ko")
+metadata/_custom_type_script = "uid://btjqp72cplwjm"
