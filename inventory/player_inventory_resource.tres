@@ -1,10 +1,21 @@
 [gd_resource type="Resource" script_class="Iventory" format=3 uid="uid://b30fblormxekf"]
 
 [ext_resource type="Script" uid="uid://btjqp72cplwjm" path="res://inventory/inventory items.gd" id="1_kg8n6"]
-[ext_resource type="Resource" uid="uid://coislhqlqvdhf" path="res://inventory/invItems.tres" id="2_wsvvq"]
 [ext_resource type="Script" uid="uid://dllhv5m4elyty" path="res://inventory/inventory.gd" id="3_rqnl2"]
+
+[sub_resource type="Resource" id="Resource_l0fbj"]
+script = ExtResource("1_kg8n6")
+metadata/_custom_type_script = "uid://btjqp72cplwjm"
+
+[sub_resource type="Resource" id="Resource_kg8n6"]
+script = ExtResource("1_kg8n6")
+metadata/_custom_type_script = "uid://btjqp72cplwjm"
+
+[sub_resource type="Resource" id="Resource_wsvvq"]
+script = ExtResource("1_kg8n6")
+metadata/_custom_type_script = "uid://btjqp72cplwjm"
 
 [resource]
 script = ExtResource("3_rqnl2")
-items = Array[ExtResource("1_kg8n6")]([ExtResource("2_wsvvq"), null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_kg8n6")]([SubResource("Resource_l0fbj"), SubResource("Resource_kg8n6"), SubResource("Resource_wsvvq"), null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://dllhv5m4elyty"
