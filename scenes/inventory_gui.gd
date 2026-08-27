@@ -14,6 +14,7 @@ func update():
 			inventory.quantity[i]
 		)
 func open():
+	update()
 	visible = true
 	isOpen = true
 	opened.emit()

@@ -1,5 +1,6 @@
 extends Node
 signal inventory_updated
+
 var saved_position : Vector2
 var returning_from_house: bool = false
 var fox_coming_out : bool = false
@@ -24,6 +25,7 @@ func add_item(item: InventoryItem):
 	for i in range(inventory.items.size()):
 		if inventory.items[i] == null:
 			inventory.items[i] = item
+			inventory.quantity[i]=1
 			print("Added: ", item.name)
 			inventory_updated.emit()
 			return
