@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://h6576fcfqrth" path="res://With_shadow/fox.tscn" id="16_jb3u1"]
 [ext_resource type="AudioStream" uid="uid://l3i4n3761kcp" path="res://audio/The Most Powerful Chicken.mp3" id="17_b734x"]
 [ext_resource type="PackedScene" uid="uid://whwfp8opdkvp" path="res://scenes/inventory_gui.tscn" id="18_5k3vi"]
+[ext_resource type="Script" uid="uid://d361k6vlunscm" path="res://canvas_layer.gd" id="18_l4q0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("2_5k3vi")
@@ -1489,6 +1490,23 @@ stream = ExtResource("17_b734x")
 volume_db = 11.143
 autoplay = true
 
-[node name="inventory gui" parent="AudioStreamPlayer" unique_id=943171249 instance=ExtResource("18_5k3vi")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1251704761]
+process_mode = 3
+script = ExtResource("18_l4q0h")
+
+[node name="inventory gui" parent="CanvasLayer" unique_id=943171249 instance=ExtResource("18_5k3vi")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -165.0
+offset_right = -109.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]

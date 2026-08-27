@@ -5,4 +5,4 @@ func _on_body_entered(body: Node2D) -> void:
 		GameManager.saved_position = body.global_position
 		print(body.global_position)
 		print (GameManager.saved_position)
-		get_tree().change_scene_to_file("res://scene 3.tscn")
+		get_tree().change_scene_to_file("res://scenes/scene 3.tscn")
