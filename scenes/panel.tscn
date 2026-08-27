@@ -15,4 +15,13 @@ texture = ExtResource("1_8e8e8")
 centered = false
 vframes = 2
 
-[node name="item" type="Sprite2D" parent="." unique_id=262736087]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=28125910]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=556992606]
+layout_mode = 2
+
+[node name="item" type="Sprite2D" parent="CenterContainer/Panel" unique_id=262736087]
