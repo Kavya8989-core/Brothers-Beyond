@@ -9,7 +9,10 @@ func _ready() -> void:
 	update()
 func update():
 	for i in range(min(inventory.items.size(), slots.size())):
-		slots[i].update(inventory.items[i])
+		slots[i].update(
+			inventory.items[i],
+			inventory.quantity[i]
+		)
 func open():
 	visible = true
 	isOpen = true

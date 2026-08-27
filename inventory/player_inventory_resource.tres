@@ -7,4 +7,5 @@
 [resource]
 script = ExtResource("3_rqnl2")
 items = Array[ExtResource("1_kg8n6")]([ExtResource("2_kg8n6"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+quantity = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 metadata/_custom_type_script = "uid://dllhv5m4elyty"
