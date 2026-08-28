@@ -19,9 +19,14 @@ func takes_dmg() -> void:
 			health = 0
 			$CollisionShape2D.set_deferred("disabled",true)
 			animated_sprite.play("death")
+			if coin.coin_recieved == true :
+				visible = false
+				animated_sprite.pause()
+			
 			await animated_sprite.animation_finished
 			coin.show()
 			coin.play("coin")
+
 	print(health)
 
 func _ready() -> void:
@@ -32,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	health_bar.value = health
 	if health == 0:
 		health_bar.hide()
-		visible = false
 	if is_mc_in_range:
 		if health > 0:
 			if is_in_attack_range:
