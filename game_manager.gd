@@ -19,14 +19,19 @@ func add_coin(amount : int) -> void :
 func add_item(item: InventoryItem):
 	for i in range(inventory.items.size()):
 		if inventory.items[i] == item:
-			inventory.quantity[i] += 1
-			print(item.name, " x", inventory.quantity[i])
+			if item.name == "coin":
+				inventory.quantity[i] += 100
+			else:
+				inventory.quantity[i] += 1
 			return
+
 	for i in range(inventory.items.size()):
 		if inventory.items[i] == null:
 			inventory.items[i] = item
-			inventory.quantity[i]=1
-			print("Added: ", item.name)
-			inventory_updated.emit()
+			
+			if item.name == "coin":
+				inventory.quantity[i] = 100
+			else:
+				inventory.quantity[i] = 1
+			
 			return
-		
