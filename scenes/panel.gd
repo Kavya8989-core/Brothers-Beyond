@@ -12,6 +12,6 @@ func update(item : InventoryItem,quantity : int):
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		itemSprite.texture = item.texture
-		itemSprite.scale = Vector2(0.05, 0.05)
+		itemSprite.scale = Vector2(0.035, 0.035)
 		quantity_label.visible = true
 		quantity_label.text = str(quantity)
