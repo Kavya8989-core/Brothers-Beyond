@@ -29,6 +29,8 @@ layout_mode = 2
 texture = ExtResource("3_wdgw4")
 
 [node name="QuantityLabel" type="Label" parent="." unique_id=2106471561]
+texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 10
