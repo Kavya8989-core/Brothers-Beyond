@@ -21,7 +21,7 @@ func takes_dmg() -> void:
 			animated_sprite.play("death")
 			if coin.coin_recieved == true :
 				visible = false
-				animated_sprite.pause()
+				animated_sprite.stop()
 			
 			await animated_sprite.animation_finished
 			coin.show()
@@ -80,7 +80,8 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == mc:
 		is_mc_in_range = false
-		animated_sprite.play("idle")
+		if health > 0:
+			animated_sprite.play("idle")
 		print("mc exited")
 		mc = null
 
