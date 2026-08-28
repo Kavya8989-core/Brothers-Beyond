@@ -1510,3 +1510,5 @@ grow_vertical = 2
 scale = Vector2(4, 4)
 
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]
+[connection signal="closed" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_closed"]
+[connection signal="opened" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_opened"]
