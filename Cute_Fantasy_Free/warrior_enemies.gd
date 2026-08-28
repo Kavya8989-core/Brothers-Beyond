@@ -75,6 +75,7 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body == mc:
 		is_mc_in_range = false
+		animated_sprite.play("idle")
 		print("mc exited")
 		mc = null
 
