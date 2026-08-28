@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	health_bar.value = health
 	if health == 0:
 		health_bar.hide()
+		visible = false
 	if is_mc_in_range:
 		if health > 0:
 			if is_in_attack_range:
