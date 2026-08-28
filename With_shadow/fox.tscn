@@ -849,6 +849,6 @@ script = ExtResource("1_3aifc")
 sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"walk up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1875539774]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875539774]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_1sdby")
