@@ -1,6 +1,7 @@
 extends CharacterBody2D
 const walk_SPEED = 70.0
 const run_SPEED=200.0
+@onready var game_over = $"../game_over"
 @onready var health_bar = $HealthBar
 @export var inventory : Iventory
 var is_in_dialogue = false
@@ -84,6 +85,8 @@ func _physics_process(_delta: float) -> void:
 				play_animations("death", check_direction)
 				GameManager.is_mc_died = true
 				await animated_sprite_2d.animation_finished
+				await game_over.play()
+				GameManager.is_mc_died = false
 				get_tree().reload_current_scene()
 				return
 

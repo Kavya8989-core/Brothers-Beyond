@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://jko1dfvxsrhv"]
+
+[ext_resource type="Script" uid="uid://bjpfqrfvxgtl7" path="res://scenes/game_over.gd" id="1_wqhvx"]
+[ext_resource type="VideoStream" uid="uid://l5jm7fb3vnrt" path="res://whatsapp-video-2026-08-29-at-152016-ekvdzv.ogv" id="1_xeevv"]
+
+[node name="game_over" type="CanvasLayer" unique_id=186767300]
+script = ExtResource("1_wqhvx")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1698556335]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_xeevv")

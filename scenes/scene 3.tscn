@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cf58wuvxsjx3c" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree4.png" id="5_wstiv"]
 [ext_resource type="Texture2D" uid="uid://bsn0n2nvryose" path="res://Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="6_4ybwx"]
 [ext_resource type="Texture2D" uid="uid://dq8hr6ovp3epl" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color4.png" id="7_qpi3f"]
+[ext_resource type="PackedScene" uid="uid://jko1dfvxsrhv" path="res://scenes/game_over.tscn" id="8_8yp13"]
 [ext_resource type="Texture2D" uid="uid://ce7mj4n6c870j" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png" id="8_kjxvd"]
 [ext_resource type="Texture2D" uid="uid://cbwujg04pjmuv" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe3.png" id="9_8et3w"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="10_mduos"]
@@ -1431,6 +1432,8 @@ z_index = 2
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAOAAIAAAAFAAAAAAAPAAIAAAAGAAAAAAAQAAIAAAAHAAAAAAAQAAMAAAAHAAEAAAAQAAQAAAAHAAIAAAAPAAQAAAAGAAIAAAAOAAQAAAAFAAIAAAAOAAMAAAAFAAEAAAAPAAMAAAAGAAEAAAAOAAUAAAAFAAQAAAAPAAUAAAAGAAQAAAAQAAUAAAAHAAQAAAADAAMAAAAGAAQAAAAEAAMAAAAHAAQAAAAHAAIAAAAIAAMAAAAHAAMAAAAIAAUAAAAEAAcAAAAFAAAAAAAFAAcAAAAGAAAAAAAGAAcAAAAHAAAAAAAGAAgAAAAHAAIAAAAEAAgAAAAFAAIAAAAFAAgAAAAGAAIAAAAEAAkAAAAFAAQAAAAFAAkAAAAGAAQAAAAGAAkAAAAHAAUAAAACAAMAAAAFAAQAAAAEAAAAAAAHAAAAAAADAAAAAAAGAAAAAAADAAEAAAAGAAEAAAACAAAAAAAFAAAAAAACAAEAAAAFAAEAAAADAAIAAAAGAAIAAAACAAIAAAAFAAIAAAAEAAIAAAAHAAIAAAAEAAEAAAAHAAEAAAA=")
 tile_set = SubResource("TileSet_454ae")
+
+[node name="game_over" parent="." unique_id=186767300 instance=ExtResource("8_8yp13")]
 
 [node name="bushes" type="TileMapLayer" parent="." unique_id=1452369421]
 z_index = 2
