@@ -89,3 +89,10 @@ func _on_attack_range_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		is_in_attack_range = true
 		print("is in attack range")
+
+
+
+
+func _on_attack_range_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		is_in_attack_range = false

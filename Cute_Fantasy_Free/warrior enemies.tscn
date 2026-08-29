@@ -312,3 +312,4 @@ scale = Vector2(2.5, 2.5)
 [connection signal="body_entered" from="detection area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection area" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="attack range" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="attack range" to="." method="_on_attack_range_body_exited"]
