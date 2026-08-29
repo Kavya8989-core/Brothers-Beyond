@@ -88,20 +88,8 @@ func _physics_process(_delta: float) -> void:
 			is_hurt = true
 			velocity = Vector2.ZERO
 
-			var direction_name: String
 
-			if abs(direction.x) > abs(direction.y):
-				if direction.x > 0:
-					direction_name = "right"
-				else:
-					direction_name = "left"
-			else:
-				if direction.y > 0:
-					direction_name = "down"
-				else:
-					direction_name = "up"
-
-			animated_sprite_2d.play("hurt " + direction_name)
+			play_animations("hurt", check_direction)
 
 			await animated_sprite_2d.animation_finished
 
