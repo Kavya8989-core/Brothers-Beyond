@@ -83,6 +83,8 @@ func _physics_process(_delta: float) -> void:
 				velocity = Vector2.ZERO
 				play_animations("death", check_direction)
 				GameManager.is_mc_died = true
+				await animated_sprite_2d.animation_finished
+				get_tree().reload_current_scene()
 				return
 
 			is_hurt = true
