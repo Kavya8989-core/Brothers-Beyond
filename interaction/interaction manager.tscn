@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3e3f63ewsblm"]
 
-[ext_resource type="Script" uid="uid://c1nm87mrwg5xm" path="res://interaction/interaction_manager.gd" id="1_830nm"]
+[ext_resource type="Script" uid="uid://c1nm87mrwg5xm" path="res://scripts gd/interaction_manager.gd" id="1_830nm"]
 
 [node name="InteractionManager" type="CanvasLayer" unique_id=1341752552]
 script = ExtResource("1_830nm")

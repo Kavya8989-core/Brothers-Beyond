@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvocnhl8dnudv"]
 
-[ext_resource type="Script" uid="uid://b3i3j1h4y8nx" path="res://mc scene/mc.gd" id="1_gjw6m"]
+[ext_resource type="Script" uid="uid://b3i3j1h4y8nx" path="res://scripts gd/mc.gd" id="1_gjw6m"]
 [ext_resource type="Texture2D" uid="uid://bfomgb384jl75" path="res://With_shadow/Swordsman_lvl3_Death_with_shadow.png" id="2_5obeu"]
 [ext_resource type="Texture2D" uid="uid://y15rjneu8iuo" path="res://With_shadow/Swordsman_lvl3_Walk_with_shadow.png" id="2_8xjm7"]
 [ext_resource type="Texture2D" uid="uid://byxotrm2ylfxj" path="res://With_shadow/Swordsman_lvl3_Hurt_with_shadow.png" id="2_r4mxp"]

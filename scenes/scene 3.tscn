@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dy4a8chdwuhaf"]
 
-[ext_resource type="Script" uid="uid://cnenf6pqnwla3" path="res://scenes/scene_3.gd" id="1_7mq34"]
+[ext_resource type="Script" uid="uid://cnenf6pqnwla3" path="res://scripts gd/scene_3.gd" id="1_7mq34"]
 [ext_resource type="Texture2D" uid="uid://c53xppjlpy2nx" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="2_5k3vi"]
 [ext_resource type="Texture2D" uid="uid://dihtubnx5lrv" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Water Foam.png" id="3_l4q0h"]
 [ext_resource type="Texture2D" uid="uid://4b84tkqxevlo" path="res://Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color1.png" id="4_8yp13"]
@@ -13,12 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://ohtwl8kmbt7e" path="res://Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/Water Rocks_04.png" id="11_c3ea8"]
 [ext_resource type="Texture2D" uid="uid://7seuh262f7jq" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="12_k5n7x"]
 [ext_resource type="Texture2D" uid="uid://clopwvywiefww" path="res://Cute_Fantasy_Free/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="13_8mpca"]
-[ext_resource type="Script" uid="uid://d6cniobdahqa" path="res://scenes/back_scene_1.gd" id="14_idcni"]
+[ext_resource type="Script" uid="uid://d6cniobdahqa" path="res://scripts gd/back_scene_1.gd" id="14_idcni"]
 [ext_resource type="PackedScene" uid="uid://beknhv54vjw7o" path="res://Cute_Fantasy_Free/warrior enemies.tscn" id="15_06fk4"]
 [ext_resource type="PackedScene" uid="uid://h6576fcfqrth" path="res://With_shadow/fox.tscn" id="16_jb3u1"]
 [ext_resource type="AudioStream" uid="uid://l3i4n3761kcp" path="res://audio/The Most Powerful Chicken.mp3" id="17_b734x"]
 [ext_resource type="PackedScene" uid="uid://whwfp8opdkvp" path="res://scenes/inventory_gui.tscn" id="18_5k3vi"]
-[ext_resource type="Script" uid="uid://d361k6vlunscm" path="res://canvas_layer.gd" id="18_l4q0h"]
+[ext_resource type="Script" uid="uid://d361k6vlunscm" path="res://scripts gd/canvas_layer.gd" id="18_l4q0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gange"]
 texture = ExtResource("2_5k3vi")

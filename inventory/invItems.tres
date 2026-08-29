@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://coislhqlqvdhf"]
 
-[ext_resource type="Script" uid="uid://btjqp72cplwjm" path="res://inventory/inventory items.gd" id="1_q6afq"]
-[ext_resource type="Texture2D" uid="uid://cmqoad057bouf" path="res://inventory/Pixel_art_style_isolated_vector_coin_for_retro_game__Shiner_golden_coin__pixel_Illustration__141973736-removebg-preview.png" id="2_dihd4"]
+[ext_resource type="Script" uid="uid://btjqp72cplwjm" path="res://scripts gd/inventory items.gd" id="1_q6afq"]
+[ext_resource type="Texture2D" path="res://inventory/Pixel_art_style_isolated_vector_coin_for_retro_game__Shiner_golden_coin__pixel_Illustration__141973736-removebg-preview.png" id="2_dihd4"]
 
 [resource]
 script = ExtResource("1_q6afq")

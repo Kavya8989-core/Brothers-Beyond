@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://beknhv54vjw7o"]
 
 [ext_resource type="Texture2D" uid="uid://bjogcdycx7c8x" path="res://enemies/Warrior/Warrior_Attack2.png" id="1_4vetk"]
-[ext_resource type="Script" uid="uid://dv6ygq4t4j4xr" path="res://Cute_Fantasy_Free/warrior_enemies.gd" id="1_bmxbn"]
+[ext_resource type="Script" uid="uid://dv6ygq4t4j4xr" path="res://scripts gd/warrior_enemies.gd" id="1_bmxbn"]
 [ext_resource type="Texture2D" uid="uid://daefe7xwd2ltw" path="res://enemies/Warrior/Warrior_Guard.png" id="2_bmxbn"]
 [ext_resource type="Texture2D" uid="uid://cueduk0ygsqwf" path="res://enemies/Warrior/Warrior_Idle.png" id="3_b3odf"]
 [ext_resource type="Texture2D" uid="uid://c6b7ye64dp2f" path="res://Tiny Swords (Free Pack)/Particle FX/Dust_01.png" id="4_b3odf"]

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4nfogjr6cdaq" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="1_m1dnj"]
 [ext_resource type="Texture2D" uid="uid://cmrumdhau6lx3" path="res://Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_gvk67"]
 [ext_resource type="Texture2D" uid="uid://dk7n6gngigqg2" path="res://resources/cobble.jpg" id="3_hmp44"]
-[ext_resource type="Script" uid="uid://w1840gfisrnt" path="res://again level 1.gd" id="4_26ho8"]
+[ext_resource type="Script" uid="uid://w1840gfisrnt" path="res://scripts gd/again level 1.gd" id="4_26ho8"]
 [ext_resource type="Texture2D" uid="uid://bw1tjjuavavye" path="res://resources/light source.jpg" id="4_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://dvocnhl8dnudv" path="res://mc scene/mc.tscn" id="5_cqxf2"]
 [ext_resource type="PackedScene" uid="uid://cycklva2xqwmn" path="res://emela.tscn" id="6_tfy05"]

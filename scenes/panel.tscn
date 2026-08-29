@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ct4kurvfesspy"]
 
 [ext_resource type="Texture2D" uid="uid://cmo34sqjc080r" path="res://inventory/inventorySlot.png" id="1_8e8e8"]
-[ext_resource type="Script" uid="uid://cmw61tltbrrxw" path="res://scenes/panel.gd" id="1_ixbsq"]
+[ext_resource type="Script" uid="uid://cmw61tltbrrxw" path="res://scripts gd/panel.gd" id="1_ixbsq"]
 [ext_resource type="Texture2D" uid="uid://y4entvkwrkl2" path="res://inventory/Pixel_art_style_isolated_vector_coin_for_retro_game__Shiner_golden_coin__pixel_Illustration__141973736-removebg-preview-Photoroom.png" id="3_wdgw4"]
 
 [node name="Panel" type="Panel" unique_id=1659928034]

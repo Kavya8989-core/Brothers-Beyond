@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://6apoo0om5all"]
 
 [ext_resource type="Texture2D" uid="uid://br8jywn73xfik" path="res://nps/npc-removebg-preview.png" id="1_cdoap"]
-[ext_resource type="Script" uid="uid://crwwt47vodrh1" path="res://scenes/npc_scene.gd" id="1_wy02n"]
-[ext_resource type="Script" uid="uid://dqr47135jm766" path="res://scenes/interaction_scene.gd" id="4_iicwf"]
+[ext_resource type="Script" uid="uid://crwwt47vodrh1" path="res://scripts gd/npc_scene.gd" id="1_wy02n"]
+[ext_resource type="Script" uid="uid://dqr47135jm766" path="res://scripts gd/interaction_scene.gd" id="4_iicwf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4qwv"]
 atlas = ExtResource("1_cdoap")
