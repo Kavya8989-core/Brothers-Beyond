@@ -84,6 +84,10 @@ func _physics_process(_delta: float) -> void:
 				velocity = Vector2.ZERO
 				play_animations("death", check_direction)
 				GameManager.is_mc_died = true
+				var music = get_tree().get_first_node_in_group("music")
+				if music:
+					music.stream_paused = true
+					print("music")
 				await animated_sprite_2d.animation_finished
 				await game_over.play()
 				GameManager.is_mc_died = false

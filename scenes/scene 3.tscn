@@ -1488,7 +1488,7 @@ scale = Vector2(0.7, 0.7)
 [node name="Fox" parent="." unique_id=2031372852 instance=ExtResource("16_jb3u1")]
 position = Vector2(90, 320)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459048244]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1459048244 groups=["music"]]
 stream = ExtResource("17_b734x")
 volume_db = 11.143
 autoplay = true

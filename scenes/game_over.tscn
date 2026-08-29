@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjpfqrfvxgtl7" path="res://scenes/game_over.gd" id="1_wqhvx"]
 [ext_resource type="VideoStream" uid="uid://l5jm7fb3vnrt" path="res://whatsapp-video-2026-08-29-at-152016-ekvdzv.ogv" id="1_xeevv"]
+[ext_resource type="AudioStream" uid="uid://d3sk5no6kuq6t" path="res://audio/WhatsApp Audio 2026-08-29 at 15.55.07.mp3" id="3_tbwuq"]
 
 [node name="game_over" type="CanvasLayer" unique_id=186767300]
 script = ExtResource("1_wqhvx")
@@ -10,3 +11,6 @@ script = ExtResource("1_wqhvx")
 offset_right = 40.0
 offset_bottom = 40.0
 stream = ExtResource("1_xeevv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1469993137]
+stream = ExtResource("3_tbwuq")
