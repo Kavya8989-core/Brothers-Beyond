@@ -1146,7 +1146,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2cqfq"]
-height = 38.0
+height = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_74c84"]
 radius = 33.13608
@@ -1168,13 +1168,13 @@ sprite_frames = SubResource("SpriteFrames_1sdby")
 animation = &"death down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877303242]
-position = Vector2(1, 8)
+position = Vector2(1, 18)
 shape = SubResource("CapsuleShape2D_2cqfq")
 
 [node name="attack_area" type="Area2D" parent="." unique_id=547699999]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_area" unique_id=250344843]
-position = Vector2(4, 7)
+position = Vector2(1, 10)
 shape = SubResource("CircleShape2D_74c84")
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=1346069196]
