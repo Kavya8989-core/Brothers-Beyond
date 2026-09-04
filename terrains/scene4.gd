@@ -1,14 +1,24 @@
 extends Node2D
 
 
-var player_entered : bool = false
-
+var stairs_left : bool = false
+var stairs_right : bool = false
 
 func _on_stair_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		player_entered = true
+		stairs_left = true
 
 
 func _on_stair_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		player_entered = false
+		stairs_left = false
+
+
+func _on_stair_2_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		stairs_right = true
+
+
+func _on_stair_2_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		stairs_right = false

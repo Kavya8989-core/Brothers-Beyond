@@ -60,10 +60,12 @@ func _physics_process(_delta: float) -> void:
 	process_animations()
 
 	var direction := Input.get_vector("left", "right", "up", "down")
-	if scene_4.player_entered == true:
+	if scene_4.stairs_left== true:
 		var horizontal = Input.get_axis("left","right")
 		direction = Vector2(horizontal, - horizontal).normalized()
-
+	if scene_4.stairs_right== true:
+		var horizontal = Input.get_axis("left","right")
+		direction = Vector2(horizontal, horizontal).normalized()
 	if direction != Vector2.ZERO:
 		check_direction = direction
 
