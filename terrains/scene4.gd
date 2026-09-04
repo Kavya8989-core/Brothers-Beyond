@@ -22,3 +22,13 @@ func _on_stair_2_body_entered(body: Node2D) -> void:
 func _on_stair_2_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		stairs_right = false
+
+
+func _on_stair_3_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		stairs_left = true
+
+
+func _on_stair_3_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		stairs_left = false
