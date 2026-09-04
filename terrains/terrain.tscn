@@ -4099,9 +4099,9 @@ y_sort_enabled = true
 position = Vector2(-4, -23)
 zoom = Vector2(1.5, 1.5)
 limit_left = -150
-limit_top = 0
-limit_right = 1152
-limit_bottom = 700
+limit_top = -625
+limit_right = 1120
+limit_bottom = 900
 limit_smoothed = true
 
 [node name="props" type="TileMapLayer" parent="." unique_id=1483564429]
