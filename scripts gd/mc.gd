@@ -4,7 +4,6 @@ const run_SPEED=200.0
 @onready var game_over = $"../game_over"
 @onready var health_bar = $HealthBar
 @export var inventory : Iventory
-@onready var scene_4 = get_tree().current_scene
 var is_in_dialogue = false
 var check_direction: Vector2=Vector2.RIGHT
 var if_attacking :=false
@@ -60,10 +59,10 @@ func _physics_process(_delta: float) -> void:
 	process_animations()
 
 	var direction := Input.get_vector("left", "right", "up", "down")
-	if scene_4.stairs_left== true:
+	if GameManager.stairs_left== true:
 		var horizontal = Input.get_axis("left","right")
 		direction = Vector2(horizontal, - horizontal).normalized()
-	if scene_4.stairs_right== true:
+	if GameManager.stairs_right== true:
 		var horizontal = Input.get_axis("left","right")
 		direction = Vector2(horizontal, horizontal).normalized()
 	if direction != Vector2.ZERO:

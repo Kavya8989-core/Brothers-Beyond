@@ -1,43 +1,43 @@
 extends Node2D
 
 
-var stairs_left : bool = false
-var stairs_right : bool = false
-
 func _on_stair_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_left = true
+		GameManager.stairs_left = true
 
 
 func _on_stair_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_left = false
+		GameManager.stairs_left = false
 
 
 func _on_stair_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_right = true
+		GameManager.stairs_right = true
 
 
 func _on_stair_2_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_right = false
+		GameManager.stairs_right = false
 
 
 func _on_stair_3_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_left = true
+		GameManager.stairs_left = true
 
 
 func _on_stair_3_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		stairs_left = false
+		GameManager.stairs_left = false
 
 
 func _on_tunnel_body_entered(body: Node2D) -> void:
-		if body.is_in_group("player"):
-			print("in tunnel")
+	if body.is_in_group("player"):
+		GameManager.inside_tunnel = true
+		body.get_node("CollisionShape2D").set_deferred("disabled", true)
 
 
 func _on_tunnel_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("player"):
+		GameManager.inside_tunnel = false
+		body.get_node("CollisionShape2D").set_deferred("disabled", false)

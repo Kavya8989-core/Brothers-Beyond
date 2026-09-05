@@ -1,6 +1,8 @@
 extends Node
 signal inventory_updated
-
+var inside_tunnel : bool = false
+var stairs_left : bool = false
+var stairs_right : bool = false
 var saved_position : Vector2
 var returning_from_house: bool = false
 var fox_coming_out : bool = false
