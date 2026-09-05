@@ -4371,7 +4371,19 @@ size = Vector2(76, 43)
 size = Vector2(81.75, 59.03125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
-size = Vector2(109, 227)
+size = Vector2(66, 227)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnp0m"]
+size = Vector2(52, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi4lh"]
+size = Vector2(24, 297)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmd7k"]
+size = Vector2(20, 305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1mkj"]
+size = Vector2(68, 20)
 
 [node name="Scene 4" type="Node2D" unique_id=252252896]
 y_sort_enabled = true
@@ -4471,8 +4483,28 @@ position = Vector2(464, 225)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tunnel" unique_id=1140542971]
-position = Vector2(4.5, -89.5)
+position = Vector2(2, -89.5)
 shape = SubResource("RectangleShape2D_454ae")
+
+[node name="bondaries" type="Area2D" parent="." unique_id=806224350]
+position = Vector2(441, 300)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bondaries" unique_id=595447800]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_xnp0m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bondaries" unique_id=560796331]
+position = Vector2(-14, -140.5)
+shape = SubResource("RectangleShape2D_xi4lh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bondaries" unique_id=1018659844]
+position = Vector2(59, -142.5)
+shape = SubResource("RectangleShape2D_wmd7k")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="bondaries" unique_id=819523716]
+position = Vector2(24, -290)
+shape = SubResource("RectangleShape2D_n1mkj")
 
 [connection signal="body_entered" from="stair1" to="." method="_on_stair_body_entered"]
 [connection signal="body_exited" from="stair1" to="." method="_on_stair_body_exited"]
@@ -4482,3 +4514,4 @@ shape = SubResource("RectangleShape2D_454ae")
 [connection signal="body_exited" from="stair2" to="." method="_on_stair_2_body_exited"]
 [connection signal="body_entered" from="tunnel" to="." method="_on_tunnel_body_entered"]
 [connection signal="body_exited" from="tunnel" to="." method="_on_tunnel_body_exited"]
+[connection signal="body_entered" from="bondaries" to="." method="_on_bondaries_body_entered"]

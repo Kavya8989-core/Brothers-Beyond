@@ -37,7 +37,9 @@ func _on_tunnel_body_entered(body: Node2D) -> void:
 		body.get_node("CollisionShape2D").set_deferred("disabled", true)
 
 
-func _on_tunnel_body_exited(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		GameManager.inside_tunnel = false
-		body.get_node("CollisionShape2D").set_deferred("disabled", false)
+func _on_bondaries_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_bondaries_2_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
