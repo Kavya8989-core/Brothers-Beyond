@@ -32,3 +32,12 @@ func _on_stair_3_body_entered(body: Node2D) -> void:
 func _on_stair_3_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		stairs_left = false
+
+
+func _on_tunnel_body_entered(body: Node2D) -> void:
+		if body.is_in_group("player"):
+			print("in tunnel")
+
+
+func _on_tunnel_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
