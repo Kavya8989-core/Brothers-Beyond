@@ -33,13 +33,11 @@ func _on_stair_3_body_exited(body: Node2D) -> void:
 
 func _on_tunnel_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		GameManager.inside_tunnel = true
-		body.get_node("CollisionShape2D").set_deferred("disabled", true)
+		body.set_collision_mask_value(1,false)
+		print("tunnel")
 
 
 func _on_bondaries_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_bondaries_2_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("player"):
+		body.set_collision_mask_value(1,true)
+		print("boundary")
