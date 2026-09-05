@@ -2458,16 +2458,24 @@ texture = ExtResource("3_fa48o")
 1:26/0 = 0
 2:26/0 = 0
 0:27/0 = 0
+0:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -5.755479, 8, 8, -2.1583042, 8)
 1:27/0 = 0
+1:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:27/0 = 0
+2:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0.35971832, -1.4388695, 5.3957615, -1.2590103, 8, 1.6187286, 8, 8, -8, 8)
 3:27/0 = 0
+3:27/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.7985878, -2.1583042, 1.7985878, 1.2590103, 8, -8, 8)
 0:28/0 = 0
 0:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, -3.956892, 8, -3.7770338, 5.5756207, -5.036044, -2.3381624)
 1:28/0 = 0
+1:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:28/0 = 0
+2:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:28/0 = 0
+3:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.4388695, -8, 4.4964676, -3.057598, -1.4388695, 1.978447, -1.6187286, 8, -8, 8)
 1:29/0 = 0
 2:29/0 = 0
+2:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.5395756, -0.35971832, 0, -3.4173155, -3.4173155, -8, -4.4964676)
 3:29/0 = 0
 0:30/0 = 0
 1:30/0 = 0
@@ -2478,9 +2486,13 @@ texture = ExtResource("3_fa48o")
 6:30/0 = 0
 7:30/0 = 0
 8:30/0 = 0
+8:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.2159033, 4.6763268, 8, -5.036044, 8, 8, -5.5756207, 8)
 9:30/0 = 0
+9:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.6978807, 4.136751, 5.75548, 4.136751, 8, -8, 8)
 10:30/0 = 0
+10:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.17985916, -0.5395756, 8, -8, 8, 8, -4.3166094, 8)
 11:30/0 = 0
+11:30/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 8, -8, 8)
 14:30/0 = 0
 15:30/0 = 0
 16:30/0 = 0
@@ -2496,9 +2508,13 @@ texture = ExtResource("3_fa48o")
 6:31/0 = 0
 7:31/0 = 0
 8:31/0 = 0
+8:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0.71943474, -1.2590103, -1.2590103)
 9:31/0 = 0
+9:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, -0.8992939, 0.35971832, -8, 1.2590122)
 10:31/0 = 0
+10:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.4964685, -8, 8, -8, 8, 3.956892, -1.6187286, 1.978447, -5.5756207, -2.877739)
 11:31/0 = 0
+11:31/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.5756207, -8, 3.4173164, -1.0791512, -8, 5.3957634)
 14:31/0 = 0
 15:31/0 = 0
 16:31/0 = 0
@@ -4381,7 +4397,7 @@ tile_set = SubResource("TileSet_lrbqv")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("4_8v5uo")]
 z_index = 2
-position = Vector2(303, 162)
+position = Vector2(368, -322)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1707482491]
 y_sort_enabled = true
@@ -4438,6 +4454,8 @@ position = Vector2(1016, 115)
 z_index = 1
 position = Vector2(-8, 22)
 shape = SubResource("RectangleShape2D_ajkat")
+
+[node name="tunnel" type="Area2D" parent="." unique_id=314533137]
 
 [connection signal="body_entered" from="stair1" to="." method="_on_stair_body_entered"]
 [connection signal="body_exited" from="stair1" to="." method="_on_stair_body_exited"]
