@@ -37,7 +37,7 @@ func _on_tunnel_body_entered(body: Node2D) -> void:
 		print("tunnel")
 
 
-func _on_bondaries_body_entered(body: Node2D) -> void:
+func _on_tunnel_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.set_collision_mask_value(1,true)
 		print("boundary")
