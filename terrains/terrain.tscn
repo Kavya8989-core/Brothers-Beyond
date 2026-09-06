@@ -219,8 +219,7 @@ texture = ExtResource("2_bgu61")
 11:21/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_aln7t"]
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rkapn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgu61"]
@@ -4608,7 +4607,7 @@ y_sort_enabled = true
 script = ExtResource("1_e03nb")
 
 [node name="tunnel boundary" type="TileMapLayer" parent="." unique_id=1702975250]
-tile_map_data = PackedByteArray("AAAeAAUAAAAVAAMAAAAeAAYAAAAVAAQAAAAeAAcAAAAVAAUAAAAeAAgAAAAVAAYAAAAeAAkAAAAVAAcAAAAeAAoAAAAVAAcAAAAeAAMAAAAVAAIAAAAeAAQAAAAVAAIAAAAbAAMAAAASAAIAAAAbAAQAAAASAAMAAAAbAAUAAAASAAQAAAAbAAYAAAASAAUAAAAbAAcAAAASAAYAAAAbAAgAAAASAAUAAAAbAAkAAAASAAYAAAAbAAoAAAAVAAcAAAA=")
+tile_map_data = PackedByteArray("AAAaAAIAAAASAAIAAAAaAAMAAAASAAMAAAAaAAQAAAASAAQAAAAaAAUAAAASAAUAAAAaAAYAAAASAAIAAAAaAAcAAAASAAMAAAAaAAgAAAASAAQAAAAaAAkAAAASAAUAAAAaAAoAAAASAAYAAAAfAAIAAAAVAAIAAAAfAAMAAAAVAAMAAAAfAAQAAAAVAAQAAAAfAAUAAAAVAAIAAAAfAAYAAAAVAAMAAAAfAAcAAAAVAAQAAAAfAAgAAAAVAAUAAAAfAAkAAAAVAAYAAAAfAAoAAAAVAAcAAAA=")
 tile_set = SubResource("TileSet_aln7t")
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=1152253847]
@@ -4641,7 +4640,7 @@ tile_map_data = PackedByteArray("AAABACYAAQAIAAUAAAAHACgAAQAIAAUAAAAIAB8AAQAKAAY
 tile_set = SubResource("TileSet_lrbqv")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("4_8v5uo")]
-z_index = 1
+z_index = 2
 position = Vector2(396, 353)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1707482491]
