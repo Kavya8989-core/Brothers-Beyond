@@ -5899,10 +5899,14 @@ texture = ExtResource("3_pjwbs")
 28:8/0 = 0
 29:8/0 = 0
 26:9/0 = 0
+26:9/0/z_index = -1
 26:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 27:9/0 = 0
+27:9/0/z_index = -1
 28:9/0 = 0
+28:9/0/z_index = -1
 29:9/0 = 0
+29:9/0/z_index = -1
 29:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:10/0 = 0
 3:10/0 = 0
@@ -5919,8 +5923,10 @@ texture = ExtResource("3_pjwbs")
 17:10/0 = 0
 18:10/0 = 0
 26:10/0 = 0
+26:10/0/z_index = -1
 26:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 29:10/0 = 0
+29:10/0/z_index = -1
 29:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:11/0 = 0
 3:11/0 = 0
@@ -5937,9 +5943,13 @@ texture = ExtResource("3_pjwbs")
 17:11/0 = 0
 18:11/0 = 0
 26:11/0 = 0
+26:11/0/z_index = -1
 27:11/0 = 0
+27:11/0/z_index = -1
 28:11/0 = 0
+28:11/0/z_index = -1
 29:11/0 = 0
+29:11/0/z_index = -1
 2:12/0 = 0
 3:12/0 = 0
 4:12/0 = 0
@@ -6133,6 +6143,7 @@ texture = ExtResource("3_pjwbs")
 15:29/0 = 0
 16:29/0 = 0
 27:10/0 = 0
+27:10/0/z_index = -1
 
 [sub_resource type="TileSet" id="TileSet_sfntp"]
 physics_layer_0/collision_layer = 1
@@ -6144,7 +6155,7 @@ y_sort_enabled = true
 script = ExtResource("1_e03nb")
 
 [node name="tunnel boundary" type="TileMapLayer" parent="." unique_id=1702975250]
-tile_map_data = PackedByteArray("AAAaAAIAAAASAAIAAAAaAAMAAAASAAMAAAAaAAQAAAASAAQAAAAaAAUAAAASAAUAAAAaAAYAAAASAAIAAAAaAAcAAAASAAMAAAAaAAgAAAASAAQAAAAaAAkAAAASAAUAAAAaAAoAAAASAAYAAAAhAAMAAAAHAAIAAAAhAAQAAAAHAAMAAAAhAAUAAAAVAAQAAAAhAAYAAAAVAAUAAAAhAAcAAAAVAAYAAAAhAAgAAAAVAAcAAAAhAAkAAAAbAAUAAAAgAAoAAAASAAQAAAAgAAsAAAASAAUAAAAhAAoAAAASAAQAAAAhAAsAAAASAAUAAAA=")
+tile_map_data = PackedByteArray("AAAaAAIAAAASAAIAAAAaAAMAAAASAAMAAAAaAAQAAAASAAQAAAAaAAUAAAASAAUAAAAaAAYAAAASAAIAAAAaAAcAAAASAAMAAAAaAAgAAAASAAQAAAAaAAkAAAASAAUAAAAaAAoAAAASAAYAAAAgAAMAAAAHAAIAAAAgAAQAAAAHAAMAAAAgAAUAAAAVAAQAAAAgAAYAAAAVAAUAAAAgAAcAAAAVAAYAAAAgAAgAAAAVAAcAAAAgAAkAAAAbAAUAAAAfAAMAAAAYAAIAAAAgAAoAAAAYAAIAAAA=")
 tile_set = SubResource("TileSet_aln7t")
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=1152253847]
@@ -6255,7 +6266,6 @@ tile_map_data = PackedByteArray("AAAdAAcAAAASABMAAAAdAAgAAAASABQAAAAdAAkAAAASABU
 tile_set = SubResource("TileSet_g0rrb")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="above tunnel" unique_id=929901311]
-z_index = 3
 tile_map_data = PackedByteArray("AAAbAAMAAAAKAAgAAAAcAAMAAAAZAAIAAAAdAAMAAAAaAAIAAAAeAAMAAAAPAAgAAAAfAAIAAAASAAUAAAAfAAMAAAAQAAgAAAAfAAAAAAACAAIAAAAfAAEAAAACAAMAAAAaAAEAAAAHAAMAAAAaAAIAAAAJAAcAAAAaAAMAAAAJAAgAAAAaAAAAAAAHAAIAAAAgAAAAAAADAAIAAAAZAAAAAAAGAAIAAAAaAAoAAAAJAAIAAAAbAAoAAAAKAAIAAAAcAAoAAAALAAIAAAAdAAoAAAAOAAIAAAAeAAoAAAAPAAIAAAAfAAoAAAAQAAIAAAAbAAsAAQAaAAkAAAAbAAwAAQAaAAoAAAAbAA0AAQAaAAsAAAAcAAsAAQAbAAkAAAAcAAwAAQAbAAoAAAAcAA0AAQAbAAsAAAAdAAsAAQAcAAkAAAAdAA0AAQAcAAsAAAAeAAsAAQAdAAkAAAAeAAwAAQAdAAoAAAAeAA0AAQAdAAsAAAA=")
 tile_set = SubResource("TileSet_sfntp")
 
