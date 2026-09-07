@@ -1,4 +1,5 @@
 extends Node2D
+@onready var tunnel_boundary =$tunnel/CollisionShape2D
 
 
 func _on_stair_body_entered(body: Node2D) -> void:
@@ -46,4 +47,7 @@ func _on_tunnel_body_exited(body: Node2D) -> void:
 
 func _on_above_tunnel_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		tunnel_boundary.disabled = true
 		body.set_collision_mask_value(3,false)
+		
+		
