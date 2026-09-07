@@ -220,9 +220,11 @@ texture = ExtResource("2_bgu61")
 9:21/0 = 0
 10:21/0 = 0
 11:21/0 = 0
+18:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_aln7t"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_rkapn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgu61"]
@@ -6150,6 +6152,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hjlmh")
 sources/1 = SubResource("TileSetAtlasSource_a82b3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnp0m"]
+size = Vector2(59, 20)
+
 [node name="Scene 4" type="Node2D" unique_id=252252896]
 y_sort_enabled = true
 script = ExtResource("1_e03nb")
@@ -6269,6 +6274,14 @@ tile_set = SubResource("TileSet_g0rrb")
 tile_map_data = PackedByteArray("AAAbAAMAAAAKAAgAAAAcAAMAAAAZAAIAAAAdAAMAAAAaAAIAAAAeAAMAAAAPAAgAAAAfAAIAAAASAAUAAAAfAAMAAAAQAAgAAAAfAAAAAAACAAIAAAAfAAEAAAACAAMAAAAaAAEAAAAHAAMAAAAaAAIAAAAJAAcAAAAaAAMAAAAJAAgAAAAaAAAAAAAHAAIAAAAgAAAAAAADAAIAAAAZAAAAAAAGAAIAAAAaAAoAAAAJAAIAAAAbAAoAAAAKAAIAAAAcAAoAAAALAAIAAAAdAAoAAAAOAAIAAAAeAAoAAAAPAAIAAAAfAAoAAAAQAAIAAAAbAAsAAQAaAAkAAAAbAAwAAQAaAAoAAAAbAA0AAQAaAAsAAAAcAAsAAQAbAAkAAAAcAAwAAQAbAAoAAAAcAA0AAQAbAAsAAAAdAAsAAQAcAAkAAAAdAA0AAQAcAAsAAAAeAAsAAQAdAAkAAAAeAAwAAQAdAAoAAAAeAA0AAQAdAAsAAAA=")
 tile_set = SubResource("TileSet_sfntp")
 
+[node name="above tunnel detection" type="Area2D" parent="." unique_id=1231695766]
+position = Vector2(638, 458)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection" unique_id=507505360]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_xnp0m")
+
 [connection signal="body_entered" from="stair1" to="." method="_on_stair_body_entered"]
 [connection signal="body_exited" from="stair1" to="." method="_on_stair_body_exited"]
 [connection signal="body_entered" from="stair3" to="." method="_on_stair_3_body_entered"]
@@ -6277,3 +6290,4 @@ tile_set = SubResource("TileSet_sfntp")
 [connection signal="body_exited" from="stair2" to="." method="_on_stair_2_body_exited"]
 [connection signal="body_entered" from="tunnel" to="." method="_on_tunnel_body_entered"]
 [connection signal="body_exited" from="tunnel" to="." method="_on_tunnel_body_exited"]
+[connection signal="body_entered" from="above tunnel detection" to="." method="_on_above_tunnel_detection_body_entered"]
