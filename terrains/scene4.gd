@@ -55,3 +55,5 @@ func _on_above_tunnel_detection_body_entered(body: Node2D) -> void:
 func _on_on_tunnel_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("on the tunnel layer")
+		tunnel_area.monitoring = true
+		tunnel_collision.set_deferred("disabled", false)
