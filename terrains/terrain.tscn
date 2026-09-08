@@ -6158,6 +6158,9 @@ size = Vector2(59, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi4lh"]
 size = Vector2(48, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmd7k"]
+size = Vector2(102, 210)
+
 [node name="Scene 4" type="Node2D" unique_id=252252896]
 y_sort_enabled = true
 script = ExtResource("1_e03nb")
@@ -6293,6 +6296,14 @@ metadata/_edit_group_ = true
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_xi4lh")
 
+[node name="inside tunnel detection" type="Area2D" parent="." unique_id=443127758]
+position = Vector2(445, 240)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inside tunnel detection" unique_id=896456659]
+position = Vector2(17, -95)
+shape = SubResource("RectangleShape2D_wmd7k")
+
 [connection signal="body_entered" from="stair1" to="." method="_on_stair_body_entered"]
 [connection signal="body_exited" from="stair1" to="." method="_on_stair_body_exited"]
 [connection signal="body_entered" from="stair3" to="." method="_on_stair_3_body_entered"]
@@ -6303,3 +6314,4 @@ shape = SubResource("RectangleShape2D_xi4lh")
 [connection signal="body_entered" from="above tunnel detection/tunnel" to="." method="_on_tunnel_body_entered"]
 [connection signal="body_exited" from="above tunnel detection/tunnel" to="." method="_on_tunnel_body_exited"]
 [connection signal="body_entered" from="on tunnel area" to="." method="_on_on_tunnel_area_body_entered"]
+[connection signal="body_entered" from="inside tunnel detection" to="." method="_on_inside_tunnel_detection_body_entered"]
