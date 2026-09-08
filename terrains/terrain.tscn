@@ -4604,9 +4604,6 @@ size = Vector2(76, 43)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajkat"]
 size = Vector2(81.75, 59.03125)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
-size = Vector2(9, 216)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_54cli"]
 texture = ExtResource("1_fjo5a")
 0:0/0 = 0
@@ -6152,6 +6149,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hjlmh")
 sources/1 = SubResource("TileSetAtlasSource_a82b3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
+size = Vector2(9, 216)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnp0m"]
 size = Vector2(59, 20)
 
@@ -6252,14 +6252,6 @@ z_index = 1
 position = Vector2(-8, 22)
 shape = SubResource("RectangleShape2D_ajkat")
 
-[node name="tunnel" type="Area2D" parent="." unique_id=314533137]
-position = Vector2(464, 225)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tunnel" unique_id=1140542971]
-position = Vector2(0.5, -84)
-shape = SubResource("RectangleShape2D_454ae")
-
 [node name="above tunnel" type="TileMapLayer" parent="." unique_id=1741909558]
 z_index = 3
 tile_map_data = PackedByteArray("AAAaAAMAAAAAAAAAAAAaAAQAAAAAAAEAAAAaAAUAAAAAAAIAAAAaAAYAAAAAAAMAAAAbAAMAAAABAAAAAAAbAAQAAAABAAEAAAAbAAUAAAABAAIAAAAbAAYAAAABAAMAAAAcAAMAAAACAAAAAAAcAAQAAAACAAEAAAAcAAUAAAACAAIAAAAcAAYAAAACAAMAAAAaAAcAAAAAAAAAAAAaAAgAAAAAAAEAAAAaAAkAAAAAAAIAAAAbAAcAAAABAAAAAAAbAAgAAAABAAEAAAAbAAkAAAABAAIAAAAcAAcAAAACAAAAAAAdAAMAAAAAAAAAAAAdAAQAAAAAAAEAAAAdAAUAAAAAAAIAAAAdAAYAAAAAAAMAAAAeAAMAAAABAAAAAAAeAAQAAAABAAEAAAAeAAUAAAABAAIAAAAeAAYAAAABAAMAAAAfAAMAAAACAAAAAAAfAAQAAAACAAEAAAAfAAUAAAACAAIAAAAfAAYAAAACAAMAAAAdAAcAAAAAAAAAAAAeAAcAAAABAAAAAAAfAAcAAAACAAAAAAAfAAkAAAACAAIAAAAcAAgAAAACAAEAAAAdAAgAAAAAAAAAAAAcAAkAAAACAAIAAAAfAAgAAAACAAEAAAAeAAgAAAABAAAAAAAdAAkAAAAAAAEAAAAeAAkAAAABAAEAAAAgAAMAAAAAAAAAAAAgAAQAAAAAAAEAAAAgAAUAAAAAAAIAAAAgAAYAAAAAAAMAAAAgAAcAAAAAAAAAAAAgAAgAAAAAAAEAAAAgAAkAAAAAAAIAAAAZAAMAAAAAAAAAAAAZAAQAAAAAAAEAAAAZAAUAAAAAAAIAAAAZAAYAAAAAAAMAAAAZAAcAAAAAAAAAAAAZAAgAAAAAAAEAAAAZAAkAAAAAAAIAAAA=")
@@ -6278,6 +6270,14 @@ tile_set = SubResource("TileSet_sfntp")
 position = Vector2(638, 458)
 metadata/_edit_group_ = true
 
+[node name="tunnel" type="Area2D" parent="above tunnel detection" unique_id=314533137]
+position = Vector2(-174, -233)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection/tunnel" unique_id=1140542971]
+position = Vector2(0.5, -84)
+shape = SubResource("RectangleShape2D_454ae")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection" unique_id=507505360]
 position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_xnp0m")
@@ -6288,6 +6288,6 @@ shape = SubResource("RectangleShape2D_xnp0m")
 [connection signal="body_exited" from="stair3" to="." method="_on_stair_3_body_exited"]
 [connection signal="body_entered" from="stair2" to="." method="_on_stair_2_body_entered"]
 [connection signal="body_exited" from="stair2" to="." method="_on_stair_2_body_exited"]
-[connection signal="body_entered" from="tunnel" to="." method="_on_tunnel_body_entered"]
-[connection signal="body_exited" from="tunnel" to="." method="_on_tunnel_body_exited"]
 [connection signal="body_entered" from="above tunnel detection" to="." method="_on_above_tunnel_detection_body_entered"]
+[connection signal="body_entered" from="above tunnel detection/tunnel" to="." method="_on_tunnel_body_entered"]
+[connection signal="body_exited" from="above tunnel detection/tunnel" to="." method="_on_tunnel_body_exited"]
