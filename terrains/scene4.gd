@@ -1,7 +1,6 @@
 extends Node2D
 @onready var tunnel_area = $"above tunnel detection/tunnel"
 @onready var tunnel_collision = $"above tunnel detection/tunnel/CollisionShape2D"
-@onready var health_bar = $HealthBar
 @onready var inside_tunnel_ar = $"inside tunnel detection"
 @onready var inside_tunnel_col = $"inside tunnel detection/CollisionShape2D"
 
@@ -68,6 +67,10 @@ func _on_on_tunnel_area_body_entered(body: Node2D) -> void:
 
 func _on_inside_tunnel_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-
-
+		body.get_node("HealtBar").hide()
 		print("inside the tunnel")
+
+
+func _on_inside_tunnel_detection_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		body.get_node("HealthBar").show()

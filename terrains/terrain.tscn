@@ -6315,3 +6315,4 @@ shape = SubResource("RectangleShape2D_wmd7k")
 [connection signal="body_exited" from="above tunnel detection/tunnel" to="." method="_on_tunnel_body_exited"]
 [connection signal="body_entered" from="on tunnel area" to="." method="_on_on_tunnel_area_body_entered"]
 [connection signal="body_entered" from="inside tunnel detection" to="." method="_on_inside_tunnel_detection_body_entered"]
+[connection signal="body_exited" from="inside tunnel detection" to="." method="_on_inside_tunnel_detection_body_exited"]
