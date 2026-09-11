@@ -6330,6 +6330,7 @@ shape = SubResource("RectangleShape2D_wmd7k")
 [connection signal="body_entered" from="stair2" to="." method="_on_stair_2_body_entered"]
 [connection signal="body_exited" from="stair2" to="." method="_on_stair_2_body_exited"]
 [connection signal="body_entered" from="above tunnel detection" to="." method="_on_above_tunnel_detection_body_entered"]
+[connection signal="body_entered" from="above tunnel detection2" to="." method="_on_above_tunnel_detection_2_body_entered"]
 [connection signal="body_entered" from="tunnel" to="." method="_on_tunnel_body_entered"]
 [connection signal="body_exited" from="tunnel" to="." method="_on_tunnel_body_exited"]
 [connection signal="body_entered" from="on tunnel area" to="." method="_on_on_tunnel_area_body_entered"]
