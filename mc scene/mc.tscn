@@ -1178,13 +1178,14 @@ position = Vector2(-12, -1)
 shape = SubResource("CircleShape2D_74c84")
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=1346069196]
-offset_left = -65.0
-offset_top = -39.0
-offset_right = 65.0
-offset_bottom = -16.0
+offset_left = -35.0
+offset_top = -37.0
+offset_right = 45.0
+offset_bottom = -27.0
 theme_override_styles/background = SubResource("StyleBoxFlat_xnp0m")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xi4lh")
 value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]

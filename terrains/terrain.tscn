@@ -6156,7 +6156,7 @@ size = Vector2(202, 20)
 size = Vector2(9, 216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi4lh"]
-size = Vector2(48, 19)
+size = Vector2(227.99998, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmd7k"]
 size = Vector2(102, 210)
@@ -6282,6 +6282,14 @@ position = Vector2(2.5, 23)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xnp0m")
 
+[node name="above tunnel detection2" type="Area2D" parent="." unique_id=1622757030]
+position = Vector2(392, 114)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection2" unique_id=585692295]
+position = Vector2(2.5, 23)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_xnp0m")
+
 [node name="tunnel" type="Area2D" parent="." unique_id=314533137]
 position = Vector2(463, 231)
 metadata/_edit_group_ = true
@@ -6295,7 +6303,15 @@ position = Vector2(555, 106)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="on tunnel area" unique_id=766896853]
-position = Vector2(0, 0.44999695)
+position = Vector2(0, 17.999992)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_xi4lh")
+
+[node name="on tunnel area2" type="Area2D" parent="." unique_id=1511261544]
+position = Vector2(373, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="on tunnel area2" unique_id=506394435]
+position = Vector2(0, 17.999992)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xi4lh")
 
@@ -6317,5 +6333,6 @@ shape = SubResource("RectangleShape2D_wmd7k")
 [connection signal="body_entered" from="tunnel" to="." method="_on_tunnel_body_entered"]
 [connection signal="body_exited" from="tunnel" to="." method="_on_tunnel_body_exited"]
 [connection signal="body_entered" from="on tunnel area" to="." method="_on_on_tunnel_area_body_entered"]
+[connection signal="body_entered" from="on tunnel area2" to="." method="_on_on_tunnel_area_2_body_entered"]
 [connection signal="body_entered" from="inside tunnel detection" to="." method="_on_inside_tunnel_detection_body_entered"]
 [connection signal="body_exited" from="inside tunnel detection" to="." method="_on_inside_tunnel_detection_body_exited"]
