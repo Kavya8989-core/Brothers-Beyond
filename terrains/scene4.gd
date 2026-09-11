@@ -1,6 +1,6 @@
 extends Node2D
-@onready var tunnel_area = $"above tunnel detection/tunnel"
-@onready var tunnel_collision = $"above tunnel detection/tunnel/CollisionShape2D"
+@onready var tunnel_area = $tunnel
+@onready var tunnel_collision = $tunnel/CollisionShape2D
 @onready var inside_tunnel_ar = $"inside tunnel detection"
 @onready var inside_tunnel_col = $"inside tunnel detection/CollisionShape2D"
 @onready var mc = $CharacterBody2D
@@ -61,6 +61,7 @@ func _on_above_tunnel_detection_body_entered(body: Node2D) -> void:
 func _on_on_tunnel_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		inside_tunnel_ar.monitoring = true
+		mc.z_index = 2
 		inside_tunnel_col.set_deferred("disabled",false)
 		print("on the tunnel layer")
 		tunnel_area.monitoring = true
