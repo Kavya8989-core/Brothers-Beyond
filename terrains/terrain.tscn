@@ -6163,6 +6163,7 @@ size = Vector2(102, 210)
 
 [node name="Scene 4" type="Node2D" unique_id=252252896]
 y_sort_enabled = true
+position = Vector2(-1, 1)
 script = ExtResource("1_e03nb")
 
 [node name="tunnel boundary" type="TileMapLayer" parent="." unique_id=1702975250]

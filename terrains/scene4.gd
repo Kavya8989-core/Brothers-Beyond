@@ -3,6 +3,7 @@ extends Node2D
 @onready var tunnel_collision = $"above tunnel detection/tunnel/CollisionShape2D"
 @onready var inside_tunnel_ar = $"inside tunnel detection"
 @onready var inside_tunnel_col = $"inside tunnel detection/CollisionShape2D"
+@onready var mc = $CharacterBody2D
 
 func _on_stair_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
@@ -51,6 +52,7 @@ func _on_above_tunnel_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		tunnel_area.monitoring = false
 		inside_tunnel_ar.monitoring = false
+		mc.z_index = 4
 		inside_tunnel_col.set_deferred("disabled",true)
 		tunnel_collision.set_deferred("disabled",true)
 		body.set_collision_mask_value(3,false)
@@ -67,7 +69,6 @@ func _on_on_tunnel_area_body_entered(body: Node2D) -> void:
 
 func _on_inside_tunnel_detection_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.get_node("HealtBar").hide()
 		print("inside the tunnel")
 
 
