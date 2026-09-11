@@ -37,6 +37,7 @@ func _on_stair_3_body_exited(body: Node2D) -> void:
 
 func _on_tunnel_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		body.get_node("HealthBar").hide()
 		body.set_collision_mask_value(1,false)
 		print("tunnel")
 

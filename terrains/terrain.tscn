@@ -6162,7 +6162,7 @@ sources/1 = SubResource("TileSetAtlasSource_a82b3")
 size = Vector2(202, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
-size = Vector2(9, 216)
+size = Vector2(9, 182)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi4lh"]
 size = Vector2(227.99998, 19)
@@ -6304,7 +6304,7 @@ position = Vector2(463, 231)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tunnel" unique_id=1140542971]
-position = Vector2(0.5, -84)
+position = Vector2(0.5, -101)
 shape = SubResource("RectangleShape2D_454ae")
 
 [node name="on tunnel area" type="Area2D" parent="." unique_id=72423361]
