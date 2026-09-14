@@ -1405,6 +1405,9 @@ sources/1 = SubResource("TileSetAtlasSource_w0clj")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74c84"]
 size = Vector2(27, 61)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
+size = Vector2(20, 44)
+
 [node name="Scene3" type="Node2D" unique_id=484648831]
 z_index = 1
 y_sort_enabled = true
@@ -1512,6 +1515,14 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 
+[node name="lev 4 promotion" type="Area2D" parent="." unique_id=247682299]
+position = Vector2(1137, 424)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lev 4 promotion" unique_id=1585799505]
+shape = SubResource("RectangleShape2D_454ae")
+
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]
 [connection signal="closed" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_opened"]
+[connection signal="body_entered" from="lev 4 promotion" to="." method="_on_lev_4_promotion_body_entered"]
+[connection signal="body_exited" from="lev 4 promotion" to="." method="_on_lev_4_promotion_body_exited"]
