@@ -6159,7 +6159,7 @@ sources/0 = SubResource("TileSetAtlasSource_hjlmh")
 sources/1 = SubResource("TileSetAtlasSource_a82b3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnp0m"]
-size = Vector2(202, 20)
+size = Vector2(202, 51.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
 size = Vector2(9, 182)
@@ -6209,7 +6209,7 @@ tile_map_data = PackedByteArray("AAABACYAAQAIAAUAAAAHACgAAQAIAAUAAAAIAB8AAQAKAAY
 tile_set = SubResource("TileSet_lrbqv")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("4_8v5uo")]
-z_index = 2
+z_index = 3
 position = Vector2(378, 356)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1707482491]
@@ -6287,7 +6287,7 @@ position = Vector2(529, 122)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection" unique_id=507505360]
-position = Vector2(2.5, 23)
+position = Vector2(11.75, 23)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xnp0m")
 
@@ -6295,7 +6295,7 @@ shape = SubResource("RectangleShape2D_xnp0m")
 position = Vector2(392, 114)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="above tunnel detection2" unique_id=585692295]
-position = Vector2(2.5, 23)
+position = Vector2(-4.125, 23)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xnp0m")
 
@@ -6308,7 +6308,7 @@ position = Vector2(0.5, -101)
 shape = SubResource("RectangleShape2D_454ae")
 
 [node name="on tunnel area" type="Area2D" parent="." unique_id=72423361]
-position = Vector2(555, 106)
+position = Vector2(572, 108)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="on tunnel area" unique_id=766896853]
@@ -6320,7 +6320,7 @@ shape = SubResource("RectangleShape2D_xi4lh")
 position = Vector2(373, 108)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="on tunnel area2" unique_id=506394435]
-position = Vector2(0, 17.999992)
+position = Vector2(-22, 20)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xi4lh")
 
