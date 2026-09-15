@@ -99,3 +99,9 @@ func _on_above_tunnel_detection_2_body_entered(body: Node2D) -> void:
 		tunnel_collision.set_deferred("disabled",true)
 		body.set_collision_mask_value(3,false)
 		print("above tunnel")
+
+
+func _on_scene_3_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().change_scene_to_file("res://scenes/scene 3.tscn")
+		
