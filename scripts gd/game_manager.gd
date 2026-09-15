@@ -14,7 +14,8 @@ var enemy_blocked : bool = false
 var is_mc_died : bool = false
 var coin : int = 0
 var inventory : Iventory = preload("res://inventory/player_inventory_resource.tres")
-
+var save_pt : bool = false
+var saved_locs : Vector2
 func add_coin(amount : int) -> void :
 	coin += amount
 
@@ -37,3 +38,7 @@ func add_item(item: InventoryItem):
 				inventory.quantity[i] = 1
 			
 			return
+
+func saved_loc (save_x : float , save_y : float):
+	if save_pt == true:
+		print("saved_pt")

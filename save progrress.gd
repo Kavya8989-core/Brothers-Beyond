@@ -8,7 +8,8 @@ var savept : bool = false
 func _ready() -> void:
 	pass # Replace with function body.
 func save_pos(save_x : float , save_y : float):
-	pass
+	if scene_3.save_pt == true :
+		print("checkpoint saved")
 		
 
 
