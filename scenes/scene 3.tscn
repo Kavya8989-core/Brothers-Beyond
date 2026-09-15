@@ -1408,6 +1408,9 @@ size = Vector2(27, 61)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454ae"]
 size = Vector2(20, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnp0m"]
+size = Vector2(20, 29)
+
 [node name="Scene3" type="Node2D" unique_id=484648831]
 z_index = 1
 y_sort_enabled = true
@@ -1446,14 +1449,14 @@ tile_set = SubResource("TileSet_wmd7k")
 
 [node name="CharacterBody2D" parent="." unique_id=222422542 instance=ExtResource("10_mduos")]
 z_index = 2
-position = Vector2(90, 379)
+position = Vector2(1037, 403)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=175985577]
 zoom = Vector2(1.5, 1.5)
-limit_left = 2
-limit_top = 0
-limit_right = 1152
-limit_bottom = 700
+limit_left = 3
+limit_top = -9
+limit_right = 1153
+limit_bottom = 691
 
 [node name="rocks" type="TileMapLayer" parent="." unique_id=224698254]
 tile_map_data = PackedByteArray("AAAyAAQAAQAAAAAAAAAEAA0AAQAAAAAAAAAcABcAAQAAAAAAAABFAAgAAQAAAAAAAAA=")
@@ -1485,7 +1488,7 @@ position = Vector2(608, 85)
 scale = Vector2(0.7, 0.7)
 
 [node name="WarriorEnemies3" parent="." unique_id=314118959 instance=ExtResource("15_06fk4")]
-position = Vector2(777, 319)
+position = Vector2(761.99994, 242)
 scale = Vector2(0.7, 0.7)
 
 [node name="Fox" parent="." unique_id=2031372852 instance=ExtResource("16_jb3u1")]
@@ -1521,8 +1524,17 @@ position = Vector2(1137, 424)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lev 4 promotion" unique_id=1585799505]
 shape = SubResource("RectangleShape2D_454ae")
 
+[node name="save_progress" type="Area2D" parent="." unique_id=1461843971]
+position = Vector2(1109, 424)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="save_progress" unique_id=1089169803]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_xnp0m")
+
 [connection signal="body_entered" from="Back_scene_1" to="Back_scene_1" method="_on_body_entered"]
 [connection signal="closed" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/inventory gui" to="." method="_on_inventory_gui_opened"]
 [connection signal="body_entered" from="lev 4 promotion" to="." method="_on_lev_4_promotion_body_entered"]
 [connection signal="body_exited" from="lev 4 promotion" to="." method="_on_lev_4_promotion_body_exited"]
+[connection signal="body_entered" from="save_progress" to="." method="_on_save_progress_body_entered"]
