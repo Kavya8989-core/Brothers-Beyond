@@ -42,3 +42,5 @@ func add_item(item: InventoryItem):
 func saved_loc (save_x : float , save_y : float):
 	if save_pt == true:
 		print("saved_pt")
+		saved_locs = Vector2(save_x,save_y)
+		print(save_x , save_y)
